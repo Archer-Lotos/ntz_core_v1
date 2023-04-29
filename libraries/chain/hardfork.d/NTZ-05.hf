@@ -1,0 +1,4 @@
+// Disable NTL
+#ifndef HARDFORK_NTZ_5_TIME
+#define HARDFORK_NTZ_5_TIME (fc::time_point_sec( 1606953600 )) //Thu Dec 03 2020 03:00:00 UTC+0300 (Москва, стандартное время)
+#endif

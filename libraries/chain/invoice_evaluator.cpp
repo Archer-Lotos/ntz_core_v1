@@ -360,7 +360,11 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                 db().adjust_balance(op.merchant, cut_fee_reward(invoice->ntz_amount.amount - op.bonus_amount.amount, merchant_percent));
                 db().adjust_balance(op.merchant, op.core_amount.amount + op.bonus_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount);
 
-                customer_account.statistics(d).update_nv(invoice->ntz_amount.amount - op.bonus_amount.amount, uint8_t(1) , uint8_t(0) , customer_account, d);
+                if( d.head_block_time() <= HARDFORK_NTZ_5_TIME ) {
+                    customer_account.statistics(d).update_nv(invoice->ntz_amount.amount - op.bonus_amount.amount, uint8_t(1) , uint8_t(0) , customer_account, d);
+                } else {
+                     customer_account.statistics(d).update_nv(op.core_amount.amount - invoice->tax.amount - invoice->delivery.amount, uint8_t(1) , uint8_t(0) , customer_account, d);                   
+                }
 
                 account_object cbk_tmp;
                 if (customer_account.active_referral_status(d.head_block_time()) > 0)
