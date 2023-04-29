@@ -1,0 +1,4 @@
+// Mass changes with invoices and referral reward Friday, 23 August 2019 г., 14:00:00
+#ifndef HARDFORK_NTZ_1_TIME
+#define HARDFORK_NTZ_1_TIME (fc::time_point_sec( 1566568800 ))
+#endif

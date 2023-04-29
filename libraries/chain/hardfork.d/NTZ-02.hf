@@ -1,0 +1,4 @@
+// Fixed new Invoice pay validation Sat, 14 Sep 2019 16:50:20 GMT
+#ifndef HARDFORK_NTZ_2_TIME
+#define HARDFORK_NTZ_2_TIME (fc::time_point_sec( 1568479820 ))
+#endif

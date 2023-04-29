@@ -1,0 +1,5 @@
+// Disable NTL
+#ifndef HARDFORK_NTZ_4_TIME
+#define HARDFORK_NTZ_4_TIME (fc::time_point_sec( 1602709140 ))
+// #define HARDFORK_NTZ_4_TIME (fc::time_point_sec( 1602687000 ))
+#endif

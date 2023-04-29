@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgraphene_elasticsearch.a  CMakeFiles/graphene_elasticsearch.dir/elasticsearch_plugin.cpp.o
+/usr/bin/ranlib libgraphene_elasticsearch.a

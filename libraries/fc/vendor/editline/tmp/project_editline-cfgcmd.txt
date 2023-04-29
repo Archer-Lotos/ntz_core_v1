@@ -1,0 +1,1 @@
+cmd='/root/ntzcore2/libraries/fc/vendor/editline/configure;--prefix=/root/ntzcore2/libraries/fc/vendor/editline'

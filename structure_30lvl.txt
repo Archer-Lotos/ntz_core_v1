@@ -1,0 +1,269 @@
+register_account level-2 "NTZ7ffjvV2vSmyyqupESFeYveLsWZnCEu4GNaX5ZpAMZuWxN9AgH3" "NTZ7ffjvV2vSmyyqupESFeYveLsWZnCEu4GNaX5ZpAMZuWxN9AgH3" onbc level-1 0 true
+import_key level-2 "5KJaSubEGkweBQdFABDkkYoybb3KRFMughktHJvZU6BXdVqnxDT"
+transfer onbc level-2 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.35","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-3 "NTZ6rydMxsbwvcKb7CfUtDZj2z9297jzmMtGA6G3ffLMiBsDfQPcX" "NTZ6rydMxsbwvcKb7CfUtDZj2z9297jzmMtGA6G3ffLMiBsDfQPcX" onbc level-2 0 true
+import_key level-3 "5Jg2hBC3YmgQ3urZqUfTLNfkv2LURxEmCXfXzuwVfqDyqG98tpn"
+transfer onbc level-3 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.36","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-4 "NTZ6vJ98VhxgwXBst43fPBy3wZB5CQhggC9WjwfVMy3G3RMdkE6Zh" "NTZ6vJ98VhxgwXBst43fPBy3wZB5CQhggC9WjwfVMy3G3RMdkE6Zh" onbc level-3 0 true
+import_key level-4 "5J5gvNDgxgW7GHp4Y3cgHq14DSEZKYZa5atUtVLXR8PFhGju6jm"
+transfer onbc level-4 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.37","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-5 "NTZ7Crs4jzVgrQiq3kGZ2ErT9KRXujT7sFvmygjLHjBv2CYtdnYyy" "NTZ7Crs4jzVgrQiq3kGZ2ErT9KRXujT7sFvmygjLHjBv2CYtdnYyy" onbc level-4 0 true
+import_key level-5 "5JLyh1sESvJ6vGPkL2DC1eAmEaTvJhZaW1WoPXimodAd4ncdCuP"
+transfer onbc level-5 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.38","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-6 "NTZ7WoGRwsd1SB1GnXxo3XVbawXbKsqCjYzka38FofZMLhK9Yduh6" "NTZ7WoGRwsd1SB1GnXxo3XVbawXbKsqCjYzka38FofZMLhK9Yduh6" onbc level-5 0 true
+import_key level-6 "5JCgU5j9vAqwoCxNs624XzG4nJhfekgsd5qsfbU82HBBnrgCoUd"
+transfer onbc level-6 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.39","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-7 "NTZ6Tw35XhLtcNRVBpBokm5eTovaV2A8p62uEHdyEujPLEUhdwC3H" "NTZ6Tw35XhLtcNRVBpBokm5eTovaV2A8p62uEHdyEujPLEUhdwC3H" onbc level-6 0 true
+import_key level-7 "5KFgeXDuhPVstSENE4w86DNeg89upAr7xjH6EDcMRcHHxLxgvGt"
+transfer onbc level-7 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.40","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-8 "NTZ75jike8H1yyjV7cPqbGiJJ44aXFQexSwyGxYKx6rVPygE2EE1U" "NTZ75jike8H1yyjV7cPqbGiJJ44aXFQexSwyGxYKx6rVPygE2EE1U" onbc level-7 0 true
+import_key level-8 "5JgAgMjzyMytWD6C8oDHo9rCmHsGMVoKDgq6LUoddctRBr337sm"
+transfer onbc level-8 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.41","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-9 "NTZ8bdL82mqocAqZdcf7v1boBXKzMHY2m9gYs38udoKdFQVi86xYr" "NTZ8bdL82mqocAqZdcf7v1boBXKzMHY2m9gYs38udoKdFQVi86xYr" onbc level-8 0 true
+import_key level-9 "5Jrfr3epfcvYXmVmwuh6VnK5F63fQvq4aQY9e25ke7r3vSA6FMd"
+transfer onbc level-9 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.42","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-10 "NTZ67VpJaLMTMeA5hEKXhV6d8zeARDWWimuv5vNjsX6sR5UPmDLT9" "NTZ67VpJaLMTMeA5hEKXhV6d8zeARDWWimuv5vNjsX6sR5UPmDLT9" onbc level-9 0 true
+import_key level-10 "5Jk37mkP2oQcQ5XMGv3JWcAnbkPnCWJypGDj2k2sWQcCs3Sji1s"
+transfer onbc level-10 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.43","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-11 "NTZ8Rz4edf7XHeEwDcQ2WyZBXAWcQoySmiXvU3fyyAPWyVDLGAmaK" "NTZ8Rz4edf7XHeEwDcQ2WyZBXAWcQoySmiXvU3fyyAPWyVDLGAmaK" onbc level-10 0 true
+import_key level-11 "5KiKjNuv3xwCGJR1YEps9JZTvrUhNnHhWzeW9jy7L5yy7Kik38S"
+transfer onbc level-11 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.44","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-12 "NTZ72yCF7Lggihgm27dov1ZUUuGKrGx3T7WKPbEe5Tt1yEFJ6YZUA" "NTZ72yCF7Lggihgm27dov1ZUUuGKrGx3T7WKPbEe5Tt1yEFJ6YZUA" onbc level-11 0 true
+import_key level-12 "5JQAWVUsw4ibtLePAQPibJwBquY3GBFtZBNiyPQtcm2ZFKu26AU"
+transfer onbc level-12 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.45","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-13 "NTZ5Xm4scqtxL2WyMkmU3wB54eSkhT7pnFDr5PBDwkoeSCeYDkrMt" "NTZ5Xm4scqtxL2WyMkmU3wB54eSkhT7pnFDr5PBDwkoeSCeYDkrMt" onbc level-12 0 true
+import_key level-13 "5JHo54gaAAW2AuJKwWCYP2uanTjsPrEEB7hwhdbdzKKvmoyTu68"
+transfer onbc level-13 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.46","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-14 "NTZ5dPXXfpgLewrWWoJxKvZ9MoN86njTUCmYox2FYtLZB7ay3MzpV" "NTZ5dPXXfpgLewrWWoJxKvZ9MoN86njTUCmYox2FYtLZB7ay3MzpV" onbc level-13 0 true
+import_key level-14 "5KKRuCyzhj6j8cZX2xm7fi6D8Wwfrf9comt8scbfaxQxeZNR9P4"
+transfer onbc level-14 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.47","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-15 "NTZ6n9eKb12CWoGuoZZjtkRSptiTrxRTPb4Xp2wC58wHKYwSp56uX" "NTZ6n9eKb12CWoGuoZZjtkRSptiTrxRTPb4Xp2wC58wHKYwSp56uX" onbc level-14 0 true
+import_key level-15 "5KJfWWdHjy711nxc9YApH9cvj53sTbrSntJAJQm9e97PuJGSdoy"
+transfer onbc level-15 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.48","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-16 "NTZ7UDJY9YocCoMYd1mMZunP8ka4SL3P4KFtNVEhPfJhwVmVCADZw" "NTZ7UDJY9YocCoMYd1mMZunP8ka4SL3P4KFtNVEhPfJhwVmVCADZw" onbc level-15 0 true
+import_key level-16 "5KPRVKpPr5etByrrMtD1KXBsdxusw54XWtUqA7msh1Fep7o6Q7R"
+transfer onbc level-16 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.49","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-17 "NTZ71WbQJuprdSYZ8YtxwNTJAqvaeypxqSAwwoxKj9jsZtawPdXD6" "NTZ71WbQJuprdSYZ8YtxwNTJAqvaeypxqSAwwoxKj9jsZtawPdXD6" onbc level-16 0 true
+import_key level-17 "5JpmZjhHknLx7yBKNMgQf9XsaJYtidtoGzxsctxzw6CmFpNWBTr"
+transfer onbc level-17 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.50","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-18 "NTZ8dpRRyyRKXJdiq9F91m9SuWMpJB8hvHRrSehLH2FDciLtS6SRB" "NTZ8dpRRyyRKXJdiq9F91m9SuWMpJB8hvHRrSehLH2FDciLtS6SRB" onbc level-17 0 true
+import_key level-18 "5KDAWDpkuZ5vekVEEBH47dXmBr5qt4zEC7e5nEQGRCoV2zaF1xe"
+transfer onbc level-18 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.51","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-19 "NTZ7BRpA7oUBtY5F5FZM6vECWDzsi21fPciTvpMTuMArUrBndUnnA" "NTZ7BRpA7oUBtY5F5FZM6vECWDzsi21fPciTvpMTuMArUrBndUnnA" onbc level-18 0 true
+import_key level-19 "5Jf8ZATTJvfYPcoBwQSjGJ2tGJNXphgoBWhFCNYkz9AE1pPZL3y"
+transfer onbc level-19 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.52","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-20 "NTZ4vyJkFmXjigzcpG9YA5ubF2mUhm7vpWSyUBWqMufoU2v596Gnz" "NTZ4vyJkFmXjigzcpG9YA5ubF2mUhm7vpWSyUBWqMufoU2v596Gnz" onbc level-19 0 true
+import_key level-20 "5KYey8mLA5smB2cjJqj71YDhrrkHFwgM8vFznKpoe1GqLN88vy3"
+transfer onbc level-20 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.53","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-21 "NTZ5iwt6bNET7QvcUHLmWFSLhoWqJYducxGRJExQ71diHrDRGvkcP" "NTZ5iwt6bNET7QvcUHLmWFSLhoWqJYducxGRJExQ71diHrDRGvkcP" onbc level-20 0 true
+import_key level-21 "5Hvyg1bmdFRimDr97eU4wBF4LJEzL9NDSSn41MXjZknoqA26XAy"
+transfer onbc level-21 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.54","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-22 "NTZ6xypaLN97F8BwaLmeWFLyxCYZadvngVhEjfGBNiYDa4BWnZhmJ" "NTZ6xypaLN97F8BwaLmeWFLyxCYZadvngVhEjfGBNiYDa4BWnZhmJ" onbc level-21 0 true
+import_key level-22 "5JD9roT53ZhwwkWTiNWfdhkbtKX5dubXY6Ur2QuSAcfoxEZKdGa"
+transfer onbc level-22 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.55","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-23 "NTZ7pbfgvA9MSWWX89YZmtNMMFJ13ZAYtgBWXNmJ8eHcns1tfr77q" "NTZ7pbfgvA9MSWWX89YZmtNMMFJ13ZAYtgBWXNmJ8eHcns1tfr77q" onbc level-22 0 true
+import_key level-23 "5JE9EM5jbF5guq31Jbz1HmJru4caGpvt3sJqXTPvVzHtPnYixyY"
+transfer onbc level-23 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.56","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-24 "NTZ6jsoT4sHD91eq3LCG9dZmCoVuR7gg3p19VnABvXJzwT3Xeyvd2" "NTZ6jsoT4sHD91eq3LCG9dZmCoVuR7gg3p19VnABvXJzwT3Xeyvd2" onbc level-23 0 true
+import_key level-24 "5KiC9km8m3eMsi965gCmww3rH4DZb86ZP73xvWMiLr2CrYVhVXN"
+transfer onbc level-24 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.57","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-25 "NTZ7qH8BcNcpyoo6Hr7ZgG6uzYTg1A1yNwvq3X3bxt6UcAS1uF1nm" "NTZ7qH8BcNcpyoo6Hr7ZgG6uzYTg1A1yNwvq3X3bxt6UcAS1uF1nm" onbc level-24 0 true
+import_key level-25 "5JvNdRcMermcFY9t8Uw3Z3Qhtw72immdTJT4iWcTDKQZbG9iJ4f"
+transfer onbc level-25 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.58","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-26 "NTZ6geG6b6B7Sp5PJk3ppceTTjXVM7GeYoxRA7vWLRJvrHvygsDno" "NTZ6geG6b6B7Sp5PJk3ppceTTjXVM7GeYoxRA7vWLRJvrHvygsDno" onbc level-25 0 true
+import_key level-26 "5JWqnue8iwNZXFk7MLCsqLR3b4QbfE57H99pXA1vShA2W6myxpj"
+transfer onbc level-26 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.59","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-27 "NTZ8WyLLd7hqg1F2m4DPSyRV2FZGedGEwzhDzBBtiANjtqqQwtyJu" "NTZ8WyLLd7hqg1F2m4DPSyRV2FZGedGEwzhDzBBtiANjtqqQwtyJu" onbc level-26 0 true
+import_key level-27 "5K2k2xKmepLQvJF21DYuqKDsjmJ72ob3EtqCGasrmBBJByumgi7"
+transfer onbc level-27 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.60","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-28 "NTZ4xtJ6apEudcAjqzP854DF3dnXCjohgeygvBSErN1dvjKoWoRBT" "NTZ4xtJ6apEudcAjqzP854DF3dnXCjohgeygvBSErN1dvjKoWoRBT" onbc level-27 0 true
+import_key level-28 "5HxuGGYVJj2SJg6BHSNxr5dLoGCXBbnD4P5nRmbvMP8RkQD9Pnk"
+transfer onbc level-28 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.61","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-29 "NTZ66TrZS6UPQsxzn71VWkjX1VGw7VzTyQab4rUw6evq5DJLDHv3U" "NTZ66TrZS6UPQsxzn71VWkjX1VGw7VzTyQab4rUw6evq5DJLDHv3U" onbc level-28 0 true
+import_key level-29 "5Jxs2gYyvphcxnWR5SfRGzcK9xVPs7LLhKZh7G9ZaPe6LsiyVYq"
+transfer onbc level-29 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.62","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-30 "NTZ6b2TmdG77wCTyLFWnfU6Ue5Whz6f9vWSXGTDCAszCRSJAJKTS7" "NTZ6b2TmdG77wCTyLFWnfU6Ue5Whz6f9vWSXGTDCAszCRSJAJKTS7" onbc level-29 0 true
+import_key level-30 "5J6Jk9wmJ9SaEE7MYiWvpaeQ8L85VvggY9WMsgwupLVT2Zb8L7w"
+transfer onbc level-30 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.63","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0
+
+register_account level-31 "NTZ8fns1WUSYMj3j3EHtWveBXvyJ98SkeQkDYRLteEoRUmaPwZttL" "NTZ8fns1WUSYMj3j3EHtWveBXvyJ98SkeQkDYRLteEoRUmaPwZttL" onbc level-30 0 true
+import_key level-31 "5K2oe2oSDK2Uewu8SUNzhq7aeoLh8f2LMwLoM1kj8qJgbBoWSHU"
+transfer onbc level-31 6000 NTZ "For statuses" true 
+begin_builder_transaction
+add_operation_to_builder_transaction 0 [49,{"fee":{"amount":0,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.64","referral_status_type":1}]
+set_fees_on_builder_transaction 0 NTZ
+sign_builder_transaction 0 true
+remove_builder_transaction 0

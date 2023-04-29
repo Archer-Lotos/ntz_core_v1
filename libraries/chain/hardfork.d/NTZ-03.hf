@@ -1,0 +1,4 @@
+// Disable NTL deposit for account_status_give_operatoin validation Tuesday, 29 October 2019 г., 18:00:00 GMT
+#ifndef HARDFORK_NTZ_3_TIME
+#define HARDFORK_NTZ_3_TIME (fc::time_point_sec( 1572372000 ))
+#endif
