@@ -178,6 +178,9 @@ class database_api_impl : public std::enable_shared_from_this<database_api_impl>
       vector<new_invoice_object> new_get_invoices(const account_id_type customer, uint8_t status) const;
       vector<new_invoice_object> new_get_merchant_invoices(const account_id_type merchant, uint8_t status) const;
 
+      vector<status_invoice_object> status_get_invoices(const account_id_type customer, uint8_t status) const;
+      vector<status_invoice_object> status_get_merchant_invoices(const account_id_type merchant, uint8_t status) const;
+
    //private:
       static string price_to_string( const price& _price, const asset_object& _base, const asset_object& _quote );
 
@@ -2464,6 +2467,40 @@ vector<new_invoice_object> database_api_impl::new_get_merchant_invoices(const ac
    const auto& invoices_by_merchant_status = _db.get_index_type<new_invoice_index>().indices().get<by_merchant_status_n>();
    auto itr = invoices_by_merchant_status.equal_range(boost::make_tuple( merchant, status ));
    std::for_each(itr.first, itr.second, [&result](const new_invoice_object& new_invoice) {
+      result.emplace_back(new_invoice);
+   });
+   return result;
+}
+
+
+vector<status_invoice_object> database_api::status_get_invoices(const account_id_type customer, uint8_t status) const
+{
+   return my->status_get_invoices(customer, status);
+}
+
+vector<status_invoice_object> database_api_impl::status_get_invoices(const account_id_type customer, uint8_t status) const
+{
+   vector<status_invoice_object> result;
+   const auto& invoices_by_customer_status = _db.get_index_type<status_invoice_index>().indices().get<by_customer_status_n_s>();
+   auto itr = invoices_by_customer_status.equal_range(boost::make_tuple( customer, status ));
+   std::for_each(itr.first, itr.second, [&result](const status_invoice_object& new_invoice) {
+      result.emplace_back(new_invoice);
+   });
+   return result;
+}
+
+
+vector<status_invoice_object> database_api::status_get_merchant_invoices(const account_id_type merchant, uint8_t status) const
+{
+   return my->status_get_merchant_invoices(merchant, status);
+}
+
+vector<status_invoice_object> database_api_impl::status_get_merchant_invoices(const account_id_type merchant, uint8_t status) const
+{
+   vector<status_invoice_object> result;
+   const auto& invoices_by_merchant_status = _db.get_index_type<status_invoice_index>().indices().get<by_merchant_status_n_s>();
+   auto itr = invoices_by_merchant_status.equal_range(boost::make_tuple( merchant, status ));
+   std::for_each(itr.first, itr.second, [&result](const status_invoice_object& new_invoice) {
       result.emplace_back(new_invoice);
    });
    return result;

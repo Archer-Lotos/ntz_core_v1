@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,7 +44,6 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/graphene/utilities" TYPE FILE FILES
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/elasticsearch.hpp"
-    "/root/ntzcore2/libraries/utilities/include/graphene/utilities/git_revision.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/key_conversion.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/padding_ostream.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/string_escape.hpp"

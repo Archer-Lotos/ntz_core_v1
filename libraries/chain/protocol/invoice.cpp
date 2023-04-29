@@ -52,6 +52,5 @@ namespace graphene { namespace chain {
     {
     FC_ASSERT( fee.amount >= 0 );
     FC_ASSERT( core_amount.amount > 0 );
-    FC_ASSERT( referral_status_type <= 3);
     }
 } } // graphene::chain

@@ -184,6 +184,95 @@ namespace graphene { namespace chain {
    >;
    using new_invoice_index = generic_index<new_invoice_object, new_invoice_multi_index_type>;
 
+
+   class status_invoice_object : public abstract_object<status_invoice_object>
+   {
+      public:
+        static const uint8_t space_id = protocol_ids;
+        static const uint8_t type_id = status_invoice_object_type;
+
+        account_id_type creator;
+        account_id_type merchant;
+        account_id_type customer;
+        string merchant_order_id;
+        asset amount;
+        asset ntz_amount;
+        asset tax;
+        asset delivery;
+        memo_data memo;
+        uint8_t status = 0; //0 - new invoice, 1 - invoice payed, 2 - invoice expired., 3 - delivered
+        time_point_sec expiration;
+        uint8_t           referral_status_type = 0;
+
+        uint8_t is_active(time_point_sec now) const
+        {
+            if (now <= expiration && status == 0)
+            {
+                return status;
+            }
+            else
+                {
+                    // status = 2;
+                    return 2;
+                }
+        }
+   };
+
+    struct by_id_n_s;
+    struct by_expiration_n_s;
+    struct by_customer_status_n_s;
+    struct by_merchant_status_n_s;
+    struct by_merchant_order_id_n_s;
+    struct by_creator_status_n_s;
+
+    using status_invoice_multi_index_type = multi_index_container<
+      status_invoice_object,
+      indexed_by<
+         ordered_unique< tag<by_id_n_s>,
+            member<object, object_id_type, &object::id>
+         >,
+         ordered_unique< tag<by_expiration_n_s>,
+            composite_key< status_invoice_object,
+               member< status_invoice_object, time_point_sec, &status_invoice_object::expiration>,
+               member< object, object_id_type, &object::id>
+            >
+         >,
+         ordered_non_unique< tag<by_customer_status_n_s>,
+            composite_key<
+               status_invoice_object,
+               member<status_invoice_object, account_id_type, &status_invoice_object::customer>,
+               member<status_invoice_object, uint8_t, &status_invoice_object::status>,
+               member< object, object_id_type, &object::id>
+            >
+         >,
+         ordered_non_unique< tag<by_merchant_status_n_s>,
+            composite_key<
+               status_invoice_object,
+               member<status_invoice_object, account_id_type, &status_invoice_object::merchant>,
+               member<status_invoice_object, uint8_t, &status_invoice_object::status>,
+               member< object, object_id_type, &object::id>
+            >
+         >,
+         ordered_non_unique< tag<by_merchant_order_id_n_s>,
+            composite_key<
+               status_invoice_object,
+               member<status_invoice_object, account_id_type, &status_invoice_object::merchant>,
+               member<status_invoice_object, string, &status_invoice_object::merchant_order_id>,
+               member< object, object_id_type, &object::id>
+            >
+         >,
+         ordered_non_unique< tag<by_creator_status_n_s>,
+            composite_key<
+               status_invoice_object,
+               member<status_invoice_object, account_id_type, &status_invoice_object::creator>,
+               member<status_invoice_object, uint8_t, &status_invoice_object::status>,
+               member< object, object_id_type, &object::id>
+            >
+         >
+      >
+   >;
+   using status_invoice_index = generic_index<status_invoice_object, status_invoice_multi_index_type>;
+
 } } // graphene::chain
 
 FC_REFLECT_DERIVED( graphene::chain::invoice_object, (graphene::db::object),
@@ -207,4 +296,18 @@ FC_REFLECT_DERIVED( graphene::chain::new_invoice_object, (graphene::db::object),
    (memo)
    (status)
    (expiration)
+)
+FC_REFLECT_DERIVED( graphene::chain::status_invoice_object, (graphene::db::object),
+   (creator)
+   (merchant)
+   (customer)
+   (merchant_order_id)
+   (amount)
+   (ntz_amount)
+   (tax)
+   (delivery)
+   (memo)
+   (status)
+   (expiration)
+   (referral_status_type)
 )

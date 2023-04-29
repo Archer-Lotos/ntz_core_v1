@@ -101,12 +101,11 @@ namespace graphene { namespace chain {
       struct fee_parameters_type { share_type fee = 0; };
 
       asset                   fee;
-      new_invoice_id_type     invoice;
+      status_invoice_id_type  invoice;
       account_id_type         customer;
       account_id_type         merchant;
       account_id_type         payer;
       asset                   core_amount;
-      uint8_t                 referral_status_type = 0;
 
       account_id_type fee_payer()const { return payer; }
       void            validate()const;
@@ -129,4 +128,4 @@ FC_REFLECT( graphene::chain::account_status_invoice_create_operation::fee_parame
 FC_REFLECT( graphene::chain::account_status_invoice_create_operation, (fee)(creator)(merchant)(customer)(merchant_order_id)(amount)(ntz_amount)(tax)(delivery)(memo)(referral_status_type))
 
 FC_REFLECT( graphene::chain::account_status_invoice_pay_operation::fee_parameters_type, (fee) )
-FC_REFLECT( graphene::chain::account_status_invoice_pay_operation, (fee)(invoice)(customer)(merchant)(payer)(core_amount)(referral_status_type))
+FC_REFLECT( graphene::chain::account_status_invoice_pay_operation, (fee)(invoice)(customer)(merchant)(payer)(core_amount))

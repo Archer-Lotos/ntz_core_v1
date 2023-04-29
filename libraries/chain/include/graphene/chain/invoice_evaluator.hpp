@@ -69,7 +69,7 @@ namespace graphene { namespace chain {
       void_result do_apply(const operation_type& o);
 
       const account_object* account;
-      const new_invoice_object* invoice;
+      const status_invoice_object* invoice;
    };
 
 } } // graphene::chain

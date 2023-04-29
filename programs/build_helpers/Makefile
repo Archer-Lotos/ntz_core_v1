@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -111,6 +99,18 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -157,21 +157,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-programs/build_helpers/CMakeFiles/member_enumerator.dir/rule:
-	cd /root/ntzcore2 && $(MAKE) -f CMakeFiles/Makefile2 programs/build_helpers/CMakeFiles/member_enumerator.dir/rule
-.PHONY : programs/build_helpers/CMakeFiles/member_enumerator.dir/rule
-
-# Convenience name for target.
-member_enumerator: programs/build_helpers/CMakeFiles/member_enumerator.dir/rule
-
-.PHONY : member_enumerator
-
-# fast build rule for target.
-member_enumerator/fast:
-	cd /root/ntzcore2 && $(MAKE) -f programs/build_helpers/CMakeFiles/member_enumerator.dir/build.make programs/build_helpers/CMakeFiles/member_enumerator.dir/build
-.PHONY : member_enumerator/fast
-
-# Convenience name for target.
 programs/build_helpers/CMakeFiles/cat-parts.dir/rule:
 	cd /root/ntzcore2 && $(MAKE) -f CMakeFiles/Makefile2 programs/build_helpers/CMakeFiles/cat-parts.dir/rule
 .PHONY : programs/build_helpers/CMakeFiles/cat-parts.dir/rule
@@ -213,33 +198,6 @@ cat-parts.cpp.s:
 	cd /root/ntzcore2 && $(MAKE) -f programs/build_helpers/CMakeFiles/cat-parts.dir/build.make programs/build_helpers/CMakeFiles/cat-parts.dir/cat-parts.cpp.s
 .PHONY : cat-parts.cpp.s
 
-member_enumerator.o: member_enumerator.cpp.o
-
-.PHONY : member_enumerator.o
-
-# target to build an object file
-member_enumerator.cpp.o:
-	cd /root/ntzcore2 && $(MAKE) -f programs/build_helpers/CMakeFiles/member_enumerator.dir/build.make programs/build_helpers/CMakeFiles/member_enumerator.dir/member_enumerator.cpp.o
-.PHONY : member_enumerator.cpp.o
-
-member_enumerator.i: member_enumerator.cpp.i
-
-.PHONY : member_enumerator.i
-
-# target to preprocess a source file
-member_enumerator.cpp.i:
-	cd /root/ntzcore2 && $(MAKE) -f programs/build_helpers/CMakeFiles/member_enumerator.dir/build.make programs/build_helpers/CMakeFiles/member_enumerator.dir/member_enumerator.cpp.i
-.PHONY : member_enumerator.cpp.i
-
-member_enumerator.s: member_enumerator.cpp.s
-
-.PHONY : member_enumerator.s
-
-# target to generate assembly for a file
-member_enumerator.cpp.s:
-	cd /root/ntzcore2 && $(MAKE) -f programs/build_helpers/CMakeFiles/member_enumerator.dir/build.make programs/build_helpers/CMakeFiles/member_enumerator.dir/member_enumerator.cpp.s
-.PHONY : member_enumerator.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -247,19 +205,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... member_enumerator"
-	@echo "... cat-parts"
 	@echo "... edit_cache"
+	@echo "... cat-parts"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... cat-parts.o"
 	@echo "... cat-parts.i"
 	@echo "... cat-parts.s"
-	@echo "... member_enumerator.o"
-	@echo "... member_enumerator.i"
-	@echo "... member_enumerator.s"
 .PHONY : help
 
 

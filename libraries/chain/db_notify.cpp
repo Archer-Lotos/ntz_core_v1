@@ -413,6 +413,13 @@ void get_relevant_accounts( const object* obj, flat_set<account_id_type>& accoun
            accounts.insert( aobj->merchant );
            break;
          }
+        case status_invoice_object_type:{
+           const auto& aobj = dynamic_cast<const status_invoice_object*>(obj);
+           FC_ASSERT( aobj != nullptr );
+           accounts.insert( aobj->customer );
+           accounts.insert( aobj->merchant );
+           break;
+         }
       }
    }
    else if( obj->id.space() == implementation_ids )

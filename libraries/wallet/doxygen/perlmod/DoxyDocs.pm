@@ -265,6 +265,9 @@ $doxydocs=
             brief => {
               doc => [
                 {
+                  type => 'parbreak'
+                },
+                {
                   type => 'text',
                   content => 'the account this balance is logically associated with '
                 }
@@ -281,6 +284,9 @@ $doxydocs=
             static => 'no',
             brief => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   type => 'text',
                   content => 'used to derive the authority key and blinding factor '
@@ -1651,12 +1657,6 @@ $doxydocs=
       },
       all_members => [
         {
-          name => 'about',
-          virtualness => 'non_virtual',
-          protection => 'public',
-          scope => 'graphene::wallet::wallet_api'
-        },
-        {
           name => 'add_operation_to_builder_transaction',
           virtualness => 'non_virtual',
           protection => 'public',
@@ -2616,6 +2616,9 @@ $doxydocs=
             detailed => {
               doc => [
                 {
+                  type => 'parbreak'
+                },
+                {
                   return => [
                     {
                       type => 'text',
@@ -2641,6 +2644,9 @@ $doxydocs=
             detailed => {
               doc => [
                 {
+                  type => 'parbreak'
+                },
+                {
                   return => [
                     {
                       type => 'text',
@@ -2665,6 +2671,9 @@ $doxydocs=
             brief => {},
             detailed => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   return => [
                     {
@@ -2780,7 +2789,7 @@ $doxydocs=
           },
           {
             kind => 'function',
-            name => 'about',
+            name => 'get_block',
             virtualness => 'non_virtual',
             protection => 'public',
             static => 'no',
@@ -2804,20 +2813,6 @@ $doxydocs=
                 }
               ]
             },
-            type => 'variant_object',
-            const => 'yes',
-            volatile => 'no',
-            parameters => [
-            ]
-          },
-          {
-            kind => 'function',
-            name => 'get_block',
-            virtualness => 'non_virtual',
-            protection => 'public',
-            static => 'no',
-            brief => {},
-            detailed => {},
             type => 'optional< signed_block_with_info >',
             const => 'no',
             volatile => 'no',
@@ -4124,7 +4119,7 @@ $doxydocs=
                     },
                     {
                       type => 'url',
-                      link => 'classgraphene_1_1wallet_1_1wallet__api_1ab050f5ee3b059a96f9a13878b671b2bf',
+                      link => 'classgraphene_1_1wallet_1_1wallet__api_1aaa8f1ab2e2e5fe7a414ada5375e14566',
                       content => 'get_dynamic_global_properties()'
                     },
                     {
@@ -4298,7 +4293,7 @@ $doxydocs=
                     },
                     {
                       type => 'url',
-                      link => 'classgraphene_1_1wallet_1_1wallet__api_1a85481b478b00eec558b21e43b917738f',
+                      link => 'classgraphene_1_1wallet_1_1wallet__api_1a9f44d453c99ffc99bbd99caa9e065a95',
                       content => 'get_global_properties()'
                     },
                     {
@@ -4456,7 +4451,7 @@ $doxydocs=
                 },
                 {
                   type => 'url',
-                  link => 'classgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f',
+                  link => 'classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596',
                   content => 'get_asset()'
                 },
                 {
@@ -4635,7 +4630,7 @@ $doxydocs=
                 },
                 {
                   type => 'url',
-                  link => 'classgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f',
+                  link => 'classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596',
                   content => 'get_asset()'
                 },
                 {
@@ -4654,7 +4649,7 @@ $doxydocs=
                 },
                 {
                   type => 'url',
-                  link => 'classgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341',
+                  link => 'classgraphene_1_1wallet_1_1wallet__api_1ae4133a2fe8f63695385c20d327a88ff9',
                   content => 'get_account()'
                 },
                 {
@@ -5883,7 +5878,7 @@ $doxydocs=
                   see => [
                     {
                       type => 'url',
-                      link => 'classgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1',
+                      link => 'classgraphene_1_1wallet_1_1wallet__api_1ab936e7a26d41b35cbfaf44d369d60e1d',
                       content => 'suggest_brain_key()'
                     }
                   ]
@@ -6040,6 +6035,9 @@ $doxydocs=
             brief => {},
             detailed => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   type => 'text',
                   content => 'Converts a signed_transaction in JSON form to its binary representation.'
@@ -6627,7 +6625,7 @@ $doxydocs=
                   see => [
                     {
                       type => 'url',
-                      link => 'classgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1',
+                      link => 'classgraphene_1_1wallet_1_1wallet__api_1ab936e7a26d41b35cbfaf44d369d60e1d',
                       content => 'suggest_brain_key()'
                     },
                     {
@@ -11226,9 +11224,6 @@ $doxydocs=
             detailed => {
               doc => [
                 {
-                  type => 'parbreak'
-                },
-                {
                   type => 'text',
                   content => 'Vote for a given committee_member.'
                 },
@@ -12817,6 +12812,9 @@ $doxydocs=
             detailed => {
               doc => [
                 {
+                  type => 'parbreak'
+                },
+                {
                   type => 'text',
                   content => 'encrypted keys '
                 }
@@ -12833,6 +12831,9 @@ $doxydocs=
             brief => {},
             detailed => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   type => 'text',
                   content => 'map an account to a set of extra keys that have been imported for that account '
@@ -13169,7 +13170,7 @@ $doxydocs=
             static => 'no',
             brief => {},
             detailed => {},
-            type => 'multi_index_container< blind_receipt, indexed_by< ordered_unique< tag< by_commitment >, const_mem_fun< blind_receipt, const commitment_type &,&blind_receipt::commitment > >, ordered_unique< tag< by_to >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >,&blind_receipt::to_date > >, ordered_non_unique< tag< by_to_asset_used >, const_mem_fun< blind_receipt, std::tuple< public_key_type, asset_id_type, bool >,&blind_receipt::to_asset_used > >, ordered_unique< tag< by_from >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >,&blind_receipt::from_date > > >>'
+            type => 'multi_index_container< blind_receipt, indexed_by< ordered_unique< tag< by_commitment >, const_mem_fun< blind_receipt, const commitment_type &, &blind_receipt::commitment > >, ordered_unique< tag< by_to >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >, &blind_receipt::to_date > >, ordered_non_unique< tag< by_to_asset_used >, const_mem_fun< blind_receipt, std::tuple< public_key_type, asset_id_type, bool >, &blind_receipt::to_asset_used > >, ordered_unique< tag< by_from >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >, &blind_receipt::from_date > > >>'
           },
           {
             kind => 'typedef',
@@ -13179,7 +13180,7 @@ $doxydocs=
             static => 'no',
             brief => {},
             detailed => {},
-            type => 'multi_index_container< key_label, indexed_by< ordered_unique< tag< by_label >, member< key_label, string,&key_label::label > >, ordered_unique< tag< by_key >, member< key_label, public_key_type,&key_label::key > > >>'
+            type => 'multi_index_container< key_label, indexed_by< ordered_unique< tag< by_label >, member< key_label, string, &key_label::label > >, ordered_unique< tag< by_key >, member< key_label, public_key_type, &key_label::key > > >>'
           }
         ]
       },
@@ -13194,6 +13195,9 @@ $doxydocs=
             brief => {},
             detailed => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   type => 'text',
                   content => 'This class takes a variant and turns it into an object of the given type, with the new operator. '
@@ -13267,7 +13271,7 @@ $doxydocs=
             static => 'no',
             brief => {},
             detailed => {},
-            type => 'multi_index_container< blind_receipt, indexed_by< ordered_unique< tag< by_commitment >, const_mem_fun< blind_receipt, const commitment_type &,&blind_receipt::commitment > >, ordered_unique< tag< by_to >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >,&blind_receipt::to_date > >, ordered_non_unique< tag< by_to_asset_used >, const_mem_fun< blind_receipt, std::tuple< public_key_type, asset_id_type, bool >,&blind_receipt::to_asset_used > >, ordered_unique< tag< by_from >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >,&blind_receipt::from_date > > >>'
+            type => 'multi_index_container< blind_receipt, indexed_by< ordered_unique< tag< by_commitment >, const_mem_fun< blind_receipt, const commitment_type &, &blind_receipt::commitment > >, ordered_unique< tag< by_to >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >, &blind_receipt::to_date > >, ordered_non_unique< tag< by_to_asset_used >, const_mem_fun< blind_receipt, std::tuple< public_key_type, asset_id_type, bool >, &blind_receipt::to_asset_used > >, ordered_unique< tag< by_from >, const_mem_fun< blind_receipt, std::pair< public_key_type, fc::time_point >, &blind_receipt::from_date > > >>'
           },
           {
             kind => 'typedef',
@@ -13277,7 +13281,7 @@ $doxydocs=
             static => 'no',
             brief => {},
             detailed => {},
-            type => 'multi_index_container< key_label, indexed_by< ordered_unique< tag< by_label >, member< key_label, string,&key_label::label > >, ordered_unique< tag< by_key >, member< key_label, public_key_type,&key_label::key > > >>'
+            type => 'multi_index_container< key_label, indexed_by< ordered_unique< tag< by_label >, member< key_label, string, &key_label::label > >, ordered_unique< tag< by_key >, member< key_label, public_key_type, &key_label::key > > >>'
           }
         ]
       },
@@ -13344,6 +13348,9 @@ $doxydocs=
             brief => {},
             detailed => {
               doc => [
+                {
+                  type => 'parbreak'
+                },
                 {
                   type => 'text',
                   content => 'This class takes a variant and turns it into an object of the given type, with the new operator. '

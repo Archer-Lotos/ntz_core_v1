@@ -198,33 +198,6 @@ elasticsearch.cpp.s:
 	cd /root/ntzcore2 && $(MAKE) -f libraries/utilities/CMakeFiles/graphene_utilities.dir/build.make libraries/utilities/CMakeFiles/graphene_utilities.dir/elasticsearch.cpp.s
 .PHONY : elasticsearch.cpp.s
 
-git_revision.o: git_revision.cpp.o
-
-.PHONY : git_revision.o
-
-# target to build an object file
-git_revision.cpp.o:
-	cd /root/ntzcore2 && $(MAKE) -f libraries/utilities/CMakeFiles/graphene_utilities.dir/build.make libraries/utilities/CMakeFiles/graphene_utilities.dir/git_revision.cpp.o
-.PHONY : git_revision.cpp.o
-
-git_revision.i: git_revision.cpp.i
-
-.PHONY : git_revision.i
-
-# target to preprocess a source file
-git_revision.cpp.i:
-	cd /root/ntzcore2 && $(MAKE) -f libraries/utilities/CMakeFiles/graphene_utilities.dir/build.make libraries/utilities/CMakeFiles/graphene_utilities.dir/git_revision.cpp.i
-.PHONY : git_revision.cpp.i
-
-git_revision.s: git_revision.cpp.s
-
-.PHONY : git_revision.s
-
-# target to generate assembly for a file
-git_revision.cpp.s:
-	cd /root/ntzcore2 && $(MAKE) -f libraries/utilities/CMakeFiles/graphene_utilities.dir/build.make libraries/utilities/CMakeFiles/graphene_utilities.dir/git_revision.cpp.s
-.PHONY : git_revision.cpp.s
-
 key_conversion.o: key_conversion.cpp.o
 
 .PHONY : key_conversion.o
@@ -349,9 +322,6 @@ help:
 	@echo "... elasticsearch.o"
 	@echo "... elasticsearch.i"
 	@echo "... elasticsearch.s"
-	@echo "... git_revision.o"
-	@echo "... git_revision.i"
-	@echo "... git_revision.s"
 	@echo "... key_conversion.o"
 	@echo "... key_conversion.i"
 	@echo "... key_conversion.s"

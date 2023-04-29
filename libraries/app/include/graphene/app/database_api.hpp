@@ -749,7 +749,8 @@ class database_api
       std::string get_egenesis_json() const;
       vector<new_invoice_object> new_get_invoices(const account_id_type customer, uint8_t status) const;
       vector<new_invoice_object> new_get_merchant_invoices(const account_id_type merchant, uint8_t status) const;
-
+      vector<status_invoice_object> status_get_invoices(const account_id_type customer, uint8_t status) const;
+      vector<status_invoice_object> status_get_merchant_invoices(const account_id_type merchant, uint8_t status) const;
    private:
       std::shared_ptr< database_api_impl > my;
 };
@@ -878,4 +879,6 @@ FC_API(graphene::app::database_api,
    (get_merchant_invoices)
    (new_get_invoices)
    (new_get_merchant_invoices)
+   (status_get_invoices)
+   (status_get_merchant_invoices)
 )

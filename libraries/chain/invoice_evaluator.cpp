@@ -446,7 +446,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
         try
         {
             database& d = db();
-            const auto& new_invoice_object_obj = db().create<new_invoice_object>([&](new_invoice_object &obj) {
+            const auto& new_invoice_object_obj = db().create<status_invoice_object>([&](status_invoice_object &obj) {
                 obj.creator = op.creator;
                 obj.merchant = op.merchant;
                 obj.customer = op.customer;
@@ -458,6 +458,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                 obj.memo = op.memo;
                 obj.status = 0;
                 obj.expiration = d.head_block_time() + fc::days(2);
+                obj.referral_status_type = op.referral_status_type;
             });
             return new_invoice_object_obj.id;
             // return void_result();
@@ -478,7 +479,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
             const asset_object& op_core_asset_type = op.core_amount.asset_id(d);
             bool insufficient_core = d.get_balance(payer_account, core_asset_type).amount >= op.core_amount.amount;
     
-            FC_ASSERT(account->referral_status_type <= op.referral_status_type);
+            FC_ASSERT(account->referral_status_type <= invoice->referral_status_type);
 
             FC_ASSERT(core_asset_type.get_id() == op_core_asset_type.get_id(), "Core Asset must be NTZ!");
             FC_ASSERT(invoice->customer == op.customer, "Customers must match!");
@@ -504,10 +505,11 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
 
             uint16_t merchant_percent = d.get_global_properties().parameters.merchant_percent;
             uint16_t merchant_referrer_percent = d.get_global_properties().parameters.merchant_referrer_percent;
-
             if ( op.core_amount.amount > 0) {
                 d.modify(*account, [&](account_object& a) {
-                    if( op.referral_status_type == a.referral_status_type )
+                    uint8_t referral_status_type = invoice->referral_status_type;
+
+                    if( referral_status_type == a.referral_status_type )
                     {
                         if (a.referral_status_expiration_date > d.head_block_time())
                         {
@@ -517,7 +519,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                         }
                     } 
                     else {
-                        a.referral_status_type = op.referral_status_type;
+                        a.referral_status_type = referral_status_type;
                         if (a.referral_status_expiration_date > d.head_block_time())
                         {
                             share_type bonus_days;
@@ -582,7 +584,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
 
             d.modify(
                 d.get(op.invoice),
-                [&]( new_invoice_object& i )
+                [&]( status_invoice_object& i )
                 {
                     i.status = 1;
                 }

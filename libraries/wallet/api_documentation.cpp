@@ -66,23 +66,14 @@ namespace graphene { namespace wallet {
 
      {
         method_description this_method;
-        this_method.method_name = "about";
-        this_method.brief_description = "                          variant_object about()\n";
+        this_method.method_name = "get_block";
+        this_method.brief_description = "        optional<signed_block_with_info> get_block(uint32_t num)\n";
         this_method.detailed_description = ""
                 "Returns info such as client version, git version of graphene/fc, version of\n"
                 "boost, openssl.\n"
                 "\n"
                 "Returns\n"
                 "    compile time info and client and dependencies versions\n"
-;
-        method_descriptions.insert(this_method);
-     }
-
-     {
-        method_description this_method;
-        this_method.method_name = "get_block";
-        this_method.brief_description = "        optional<signed_block_with_info> get_block(uint32_t num)\n";
-        this_method.detailed_description = ""
 ;
         method_descriptions.insert(this_method);
      }

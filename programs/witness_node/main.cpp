@@ -42,7 +42,6 @@
 #include <boost/container/flat_set.hpp>
 #include <boost/algorithm/string.hpp>
 
-#include <graphene/utilities/git_revision.hpp>
 #include <boost/algorithm/string/replace.hpp>
 #include <websocketpp/version.hpp>
 
@@ -118,9 +117,9 @@ int main(int argc, char** argv) {
       }
       if( options.count("version") )
       {
-         std::cout << "Version: " << graphene::utilities::git_revision_description << "\n";
-         std::cout << "SHA: " << graphene::utilities::git_revision_sha << "\n";
-         std::cout << "Timestamp: " << fc::get_approximate_relative_time_string(fc::time_point_sec(graphene::utilities::git_revision_unix_timestamp)) << "\n";
+         std::cout << "Version: \n";
+         std::cout << "SHA: \n";
+         std::cout << "Timestamp: \n";
          std::cout << "SSL: " << OPENSSL_VERSION_TEXT << "\n";
          std::cout << "Boost: " << boost::replace_all_copy(std::string(BOOST_LIB_VERSION), "_", ".") << "\n";
          std::cout << "Websocket++: " << websocketpp::major_version << "." << websocketpp::minor_version << "." << websocketpp::patch_version << "\n";

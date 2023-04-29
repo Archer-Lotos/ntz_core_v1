@@ -1,8 +1,8 @@
-DOXY_EXEC_PATH = /root/ntzcore/libraries/wallet
-DOXYFILE = /root/ntzcore/libraries/wallet/Doxyfile
-DOXYDOCS_PM = /root/ntzcore/libraries/wallet/doxygen/perlmod/DoxyDocs.pm
-DOXYSTRUCTURE_PM = /root/ntzcore/libraries/wallet/doxygen/perlmod/DoxyStructure.pm
-DOXYRULES = /root/ntzcore/libraries/wallet/doxygen/perlmod/doxyrules.make
+DOXY_EXEC_PATH = /root/ntzcore2/libraries/wallet
+DOXYFILE = /root/ntzcore2/libraries/wallet/Doxyfile
+DOXYDOCS_PM = /root/ntzcore2/libraries/wallet/doxygen/perlmod/DoxyDocs.pm
+DOXYSTRUCTURE_PM = /root/ntzcore2/libraries/wallet/doxygen/perlmod/DoxyStructure.pm
+DOXYRULES = /root/ntzcore2/libraries/wallet/doxygen/perlmod/doxyrules.make
 
 .PHONY: clean-perlmod
 clean-perlmod::

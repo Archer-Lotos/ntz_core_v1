@@ -133,6 +133,9 @@ const uint8_t invoice_object::type_id;
 const uint8_t new_invoice_object::space_id;
 const uint8_t new_invoice_object::type_id;
 
+const uint8_t status_invoice_object::space_id;
+const uint8_t status_invoice_object::type_id;
+
 void database::initialize_evaluators()
 {
    _operation_evaluators.resize(255);
@@ -220,6 +223,7 @@ void database::initialize_indexes()
    add_index< primary_index<blinded_balance_index> >();
    add_index< primary_index<invoice_index> >();
    add_index< primary_index<new_invoice_index> >();
+   add_index< primary_index<status_invoice_index> >();
 
    //Implementation object indexes
    add_index< primary_index<transaction_index                             > >();

@@ -2,7 +2,7 @@
 *.sw*
 *.vscode/
 *.cmake
-*CMakeFiles*
+tests
 results.txt
 CMakeCache.txt
 CMakeFiles
