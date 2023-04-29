@@ -107,7 +107,8 @@ namespace graphene { namespace chain {
             account_status_give_operation,
             account_give_pa_operation,
             account_status_invoice_create_operation,
-            account_status_invoice_pay_operation
+            account_status_invoice_pay_operation,
+            account_status_give_light_operation
          > operation;
 
    /// @} // operations group

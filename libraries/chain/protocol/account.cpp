@@ -328,4 +328,22 @@ void account_give_pa_operation::validate() const
    FC_ASSERT( referral_status_type <= 3);
 }
 
+share_type account_status_give_light_operation::calculate_fee(const fee_parameters_type& k) const
+{
+   if( referral_status_type == 1 )
+      return k.status_1_fee;
+   if( referral_status_type == 2 )
+      return k.status_2_fee;
+   if( referral_status_type == 3 )
+      return k.status_3_fee;
+   return k.status_3_fee;
+}
+
+void account_status_give_light_operation::validate() const
+{
+   FC_ASSERT( fee.amount >= 0 );
+   FC_ASSERT( referral_status_type > 0);
+   FC_ASSERT( referral_status_type <= 3);
+}
+
 } } // graphene::chain

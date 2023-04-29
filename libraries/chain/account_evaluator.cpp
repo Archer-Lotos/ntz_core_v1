@@ -690,4 +690,97 @@ void_result account_give_pa_evaluator::do_apply(const account_give_pa_evaluator:
 } FC_RETHROW_EXCEPTIONS( error, "Unable to upgrade account '${a}'", ("a",o.account_to_upgrade(db()).name) ) }
 
 
+void_result account_status_give_light_evaluator::do_evaluate(const account_status_give_light_evaluator::operation_type& o)
+{ try {
+   FC_ASSERT(o.giver == account_id_type(28));
+
+   database& d = db();
+   account = &d.get(o.account_to_upgrade);
+   FC_ASSERT(account->referral_status_type <= o.referral_status_type);
+   return {};
+} FC_RETHROW_EXCEPTIONS( error, "Unable to downgrade account status '${a}'", ("a",o.account_to_upgrade(db()).name) ) }
+
+
+void_result account_status_give_light_evaluator::do_apply(const account_status_give_light_evaluator::operation_type& o)
+{ try {
+   database& d = db();
+   const account_object& ref_01 = d.get(account->referrer);
+   const share_type fee_value = o.ntz_amount.amount;
+   const share_type fee_value_old = o.fee.amount;
+   ref_01.statistics(d).update_pv(fee_value, ref_01, d);
+   ref_01.statistics(d).update_nv(fee_value, uint8_t(1) , uint8_t(0) , ref_01, d);
+
+   if( d.head_block_time() > HARDFORK_NTZ_6_TIME ) {
+      const account_object& ref_01 = d.get(account->referrer);
+      const account_statistics_object& customer_statistics = ref_01.statistics(d);
+      d.modify(customer_statistics, [&](account_statistics_object& s)
+      {
+         s.pay_fee( fee_value, d.get_global_properties().parameters.cashback_vesting_threshold );
+      });
+   }
+
+   d.modify(ref_01, [&](account_object& a) {
+      a.statistics(d).process_fees(a, d);
+   });
+
+   d.modify(*account, [&](account_object& a) {
+      a.statistics(d).process_fees(a, d);
+      share_type last_days = (a.referral_status_expiration_date - d.head_block_time()).count()/fc::days(1).count();
+
+      if( o.referral_status_type == a.referral_status_type && a.referral_status_expiration_date > d.head_block_time())
+      {
+         a.referral_status_expiration_date += fc::days(365);
+         a.referral_status_paid_fee = fee_value;
+      } 
+      else {
+         share_type bonus_days;
+         share_type paid_last;
+         paid_last = 0;
+         bonus_days = 0;
+         if (a.referral_status_expiration_date > d.head_block_time()) {
+            paid_last = a.referral_status_paid_fee/365*last_days;
+            bonus_days = bonus_days + paid_last*365/fee_value_old;
+         }
+         a.referral_status_type = o.referral_status_type;
+         a.referral_status_expiration_date = d.head_block_time() + fc::days(365);
+
+         if (bonus_days>0)
+         {
+            uint64_t uintbonus;
+            uintbonus=0;
+            for (int i = 0; i < bonus_days; ++i)
+            {
+               uintbonus++;
+            }
+            a.referral_status_expiration_date = a.referral_status_expiration_date + fc::days(uintbonus);
+          ilog("BONUS - ACCOUNT ${account}, LAST_DAYS ${last_days},  BONUS_DAYS ${bonus_days}, PAID_LAST ${paid_last}",  ("account", a.name)("bonus_days", uintbonus)("last_days",last_days)("paid_last",paid_last));
+
+         }
+
+         a.referral_status_paid_fee = fee_value;
+         const auto& chain_params = d.get_global_properties().parameters;
+
+         if (o.referral_status_type == 1) {
+            a.referral_levels = chain_params.status_levels_01;
+            a.status_denominator = chain_params.status_denominator_01;
+         }
+         if (o.referral_status_type == 2) {
+            a.referral_levels = chain_params.status_levels_02;
+            a.status_denominator = chain_params.status_denominator_02;
+         }
+         if (o.referral_status_type == 3) {
+            a.referral_levels = chain_params.status_levels_03;
+            a.status_denominator = chain_params.status_denominator_03;
+         }
+      }
+
+      const account_object& user_account = o.account_to_upgrade(d);
+      const share_type start_pv = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(1));
+      user_account.statistics(d).update_pv(start_pv, user_account, d);
+
+   });
+   return {};
+} FC_RETHROW_EXCEPTIONS( error, "Unable to upgrade account status '${a}'", ("a",o.account_to_upgrade(db()).name) ) }
+
+
 } } // graphene::chain

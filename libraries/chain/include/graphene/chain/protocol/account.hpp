@@ -324,6 +324,26 @@ namespace graphene { namespace chain {
       share_type      calculate_fee( const fee_parameters_type& k )const;
    };
 
+   struct account_status_give_light_operation : public base_operation
+   {
+      struct fee_parameters_type {
+         uint64_t status_1_fee   =  6000 * GRAPHENE_BLOCKCHAIN_PRECISION;
+         uint64_t status_2_fee   = 30000 * GRAPHENE_BLOCKCHAIN_PRECISION; 
+         uint64_t status_3_fee   = 60000 * GRAPHENE_BLOCKCHAIN_PRECISION; 
+      };
+
+      asset             fee;
+      /// The account to upgrade; must not already be a lifetime member
+      account_id_type   account_to_upgrade;
+      account_id_type   giver;
+      uint8_t           referral_status_type = 0;
+      asset             ntz_amount;
+      optional< string > start_bonus;
+      account_id_type fee_payer()const { return giver; }
+      void            validate()const;
+      share_type      calculate_fee( const fee_parameters_type& k )const;
+   };
+
 } } // graphene::chain
 
 FC_REFLECT(graphene::chain::account_options, (memo_key)(voting_account)(num_witness)(num_committee)(votes)(extensions))
@@ -357,8 +377,10 @@ FC_REFLECT( graphene::chain::account_transfer_operation::fee_parameters_type, (f
 FC_REFLECT( graphene::chain::account_status_upgrade_operation::fee_parameters_type, (status_1_fee)(status_2_fee)(status_3_fee) )
 FC_REFLECT( graphene::chain::account_status_give_operation::fee_parameters_type, (status_1_fee)(status_2_fee)(status_3_fee) )
 FC_REFLECT( graphene::chain::account_give_pa_operation::fee_parameters_type, (status_1_fee)(status_2_fee)(status_3_fee) )
+FC_REFLECT( graphene::chain::account_status_give_light_operation::fee_parameters_type, (status_1_fee)(status_2_fee)(status_3_fee) )
 
 FC_REFLECT( graphene::chain::account_transfer_operation, (fee)(account_id)(new_owner)(extensions) )
 FC_REFLECT( graphene::chain::account_status_upgrade_operation,(fee)(account_to_upgrade)(referral_status_type) )
 FC_REFLECT( graphene::chain::account_status_give_operation,(fee)(account_to_upgrade)(giver)(referral_status_type)(start_bonus) )
 FC_REFLECT( graphene::chain::account_give_pa_operation,(fee)(account_to_upgrade)(giver)(referral_status_type) )
+FC_REFLECT( graphene::chain::account_status_give_light_operation,(fee)(account_to_upgrade)(giver)(referral_status_type)(ntz_amount)(start_bonus) )

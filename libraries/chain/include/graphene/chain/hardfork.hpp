@@ -226,6 +226,9 @@
 // Disable NTL
 #ifndef HARDFORK_NTZ_5_TIME
 #define HARDFORK_NTZ_5_TIME (fc::time_point_sec( 1606953600 )) //Thu Dec 03 2020 03:00:00 UTC+0300 (Москва, стандартное время)
+#endif// Disable NTL
+#ifndef HARDFORK_NTZ_6_TIME
+#define HARDFORK_NTZ_6_TIME (fc::time_point_sec( 1607573000 )) //Thu Dec 10 2020 07:00:00 UTC+0300 (Москва, стандартное время)
 #endif// #143 Require voted entities to exist
 #ifndef HARDFORK_CORE_143_TIME
 #define HARDFORK_CORE_143_TIME (fc::time_point_sec( 1512747600 ))

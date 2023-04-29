@@ -102,4 +102,15 @@ public:
    const account_object* account;
 };
 
+class account_status_give_light_evaluator : public evaluator<account_status_give_light_evaluator>
+{
+public:
+   typedef account_status_give_light_operation operation_type;
+
+   void_result do_evaluate(const operation_type& o);
+   void_result do_apply(const operation_type& o);
+
+   const account_object* account;
+};
+
 } } // graphene::chain
