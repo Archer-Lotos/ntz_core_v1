@@ -41,13 +41,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/root/ntzcore2/libraries/plugins/witness/cmake_install.cmake")
   include("/root/ntzcore2/libraries/plugins/account_history/cmake_install.cmake")
-  include("/root/ntzcore2/libraries/plugins/elasticsearch/cmake_install.cmake")
   include("/root/ntzcore2/libraries/plugins/market_history/cmake_install.cmake")
   include("/root/ntzcore2/libraries/plugins/grouped_orders/cmake_install.cmake")
-  include("/root/ntzcore2/libraries/plugins/delayed_node/cmake_install.cmake")
-  include("/root/ntzcore2/libraries/plugins/debug_witness/cmake_install.cmake")
-  include("/root/ntzcore2/libraries/plugins/snapshot/cmake_install.cmake")
-  include("/root/ntzcore2/libraries/plugins/es_objects/cmake_install.cmake")
 
 endif()
 

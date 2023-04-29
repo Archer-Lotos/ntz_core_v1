@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgraphene_grouped_orders.a  CMakeFiles/graphene_grouped_orders.dir/grouped_orders_plugin.cpp.o
-/usr/bin/ranlib libgraphene_grouped_orders.a

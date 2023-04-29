@@ -39,14 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/root/ntzcore2/programs/build_helpers/cmake_install.cmake")
   include("/root/ntzcore2/programs/cli_wallet/cmake_install.cmake")
-  include("/root/ntzcore2/programs/genesis_util/cmake_install.cmake")
   include("/root/ntzcore2/programs/witness_node/cmake_install.cmake")
-  include("/root/ntzcore2/programs/delayed_node/cmake_install.cmake")
-  include("/root/ntzcore2/programs/js_operation_serializer/cmake_install.cmake")
-  include("/root/ntzcore2/programs/size_checker/cmake_install.cmake")
-  include("/root/ntzcore2/programs/network_mapper/cmake_install.cmake")
 
 endif()
 

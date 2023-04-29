@@ -141,6 +141,7 @@ void database::initialize_evaluators()
    register_evaluator<account_upgrade_evaluator>();
    register_evaluator<account_status_upgrade_evaluator>();
    register_evaluator<account_status_give_evaluator>();
+   register_evaluator<account_give_pa_evaluator>();
    register_evaluator<account_whitelist_evaluator>();
    register_evaluator<committee_member_create_evaluator>();
    register_evaluator<committee_member_update_evaluator>();
@@ -187,7 +188,6 @@ void database::initialize_evaluators()
    register_evaluator<new_invoice_create_evaluator>();
    register_evaluator<new_invoice_pay_evaluator>();
    register_evaluator<send_message_evaluator>();
-   register_evaluator<account_give_pa_evaluator>();
    register_evaluator<account_status_invoice_create_evaluator>();
    register_evaluator<account_status_invoice_pay_evaluator>();
 }

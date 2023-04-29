@@ -416,7 +416,6 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
     }
 
 
-
     void_result account_status_invoice_create_evaluator::do_evaluate(const account_status_invoice_create_operation &op)
     {
         try
@@ -429,7 +428,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
 
             FC_ASSERT(account->referral_status_type <= op.referral_status_type);
 
-            FC_ASSERT(op.creator == account_id_type(264))
+            FC_ASSERT(op.creator == account_id_type(264));
 
             FC_ASSERT(admin.whitelisted_accounts.find(merchant.id) != admin.whitelisted_accounts.end(), "Not allowed merchant!");
             FC_ASSERT(merchant.active_referral_status(d.head_block_time()) > 0, "Not active partner!");
@@ -459,13 +458,12 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                 obj.memo = op.memo;
                 obj.status = 0;
                 obj.expiration = d.head_block_time() + fc::days(2);
-                ;
             });
             return new_invoice_object_obj.id;
+            // return void_result();
         }
         FC_CAPTURE_AND_RETHROW((op))
     }
-
 
     void_result account_status_invoice_pay_evaluator::do_evaluate(const account_status_invoice_pay_operation &op)
     {
@@ -544,7 +542,7 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                             a.referral_status_expiration_date = d.head_block_time() + fc::days(365);
                         } 
                     }
-                }
+                });
 
                 db().adjust_balance(op.payer, -op.core_amount);
                 db().adjust_balance(op.merchant, cut_fee_reward(invoice->ntz_amount.amount, merchant_percent));
@@ -580,7 +578,6 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                     addo.accumulated_fees -= merchant_referrer_core_reward.amount;
                     addo.accumulated_fees += invoice->tax.amount;
                 });
- 
             }
 
             d.modify(

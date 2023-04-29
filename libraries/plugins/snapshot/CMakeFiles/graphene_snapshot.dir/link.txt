@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgraphene_snapshot.a  CMakeFiles/graphene_snapshot.dir/snapshot.cpp.o
-/usr/bin/ranlib libgraphene_snapshot.a

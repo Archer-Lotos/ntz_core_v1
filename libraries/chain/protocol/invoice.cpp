@@ -45,11 +45,13 @@ namespace graphene { namespace chain {
     FC_ASSERT( tax.amount >= 0 );
     FC_ASSERT( delivery.amount >= 0 );
     FC_ASSERT( ntz_amount.amount >= 0 );
+    FC_ASSERT( referral_status_type <= 3);
     }
 
     void account_status_invoice_pay_operation::validate()const
     {
     FC_ASSERT( fee.amount >= 0 );
     FC_ASSERT( core_amount.amount > 0 );
+    FC_ASSERT( referral_status_type <= 3);
     }
 } } // graphene::chain
