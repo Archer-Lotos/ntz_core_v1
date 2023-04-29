@@ -684,6 +684,10 @@ void_result account_give_pa_evaluator::do_apply(const account_give_pa_evaluator:
       user_account.statistics(d).update_pv(params.status_threshold_01+(GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(20)), user_account, d);
    } else if (o.referral_status_type == 2) {
       user_account.statistics(d).update_pv(params.status_threshold_02+(GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(14)), user_account, d);
+   } else if (o.referral_status_type == 10) {
+      if( d.head_block_time() >= HARDFORK_NTZ_7_TIME ) {
+         user_account.statistics(d).update_pv(params.status_threshold_10+(GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(14)), user_account, d);
+      }
    }
 
    return {};

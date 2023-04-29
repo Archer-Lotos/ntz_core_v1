@@ -1,0 +1,799 @@
+{
+  "chain_id": "e9fdd593150113f409c7a64462472b9fb5a877f4a9859add2f89b3273f862972",
+  "my_accounts": [{
+      "id": "1.2.6",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init0",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ6RYYsJtZRepJmKnmS7trdwJ7QgYRiPtco4PKkZqXHcxyWXjPCU",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ6RYYsJtZRepJmKnmS7trdwJ7QgYRiPtco4PKkZqXHcxyWXjPCU",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ6RYYsJtZRepJmKnmS7trdwJ7QgYRiPtco4PKkZqXHcxyWXjPCU",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.6",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.7",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init1",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5qrJRLDJCDPHuSbGByR2HSc42dniqqAcGgBFrMr97wiZeNb6TQ",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5qrJRLDJCDPHuSbGByR2HSc42dniqqAcGgBFrMr97wiZeNb6TQ",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ5qrJRLDJCDPHuSbGByR2HSc42dniqqAcGgBFrMr97wiZeNb6TQ",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.7",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "cashback_vb": "1.13.685",
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.8",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init2",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5LEncARvrnkaLms7ykchomcE5cVRmsQvdFNaPPtk38xzLSSDyg",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5LEncARvrnkaLms7ykchomcE5cVRmsQvdFNaPPtk38xzLSSDyg",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ5LEncARvrnkaLms7ykchomcE5cVRmsQvdFNaPPtk38xzLSSDyg",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.8",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "cashback_vb": "1.13.697",
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.9",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init3",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7UJmatmv1q3v2jWkNQ6W8HB2cX1SFuiDvHwcue2HRzs7zBap4e",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7UJmatmv1q3v2jWkNQ6W8HB2cX1SFuiDvHwcue2HRzs7zBap4e",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ7UJmatmv1q3v2jWkNQ6W8HB2cX1SFuiDvHwcue2HRzs7zBap4e",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.9",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.10",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init4",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7b2Pphn79dA7qiNsDUJvrbdFsj7yzptbi9BY61Z7jxKY1iB1pt",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7b2Pphn79dA7qiNsDUJvrbdFsj7yzptbi9BY61Z7jxKY1iB1pt",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ7b2Pphn79dA7qiNsDUJvrbdFsj7yzptbi9BY61Z7jxKY1iB1pt",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.10",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.11",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init5",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5RUtAaKQBig7CaiAPqgjGRoZNiKYdmnbeJyzaF1T59EVokr9n5",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5RUtAaKQBig7CaiAPqgjGRoZNiKYdmnbeJyzaF1T59EVokr9n5",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ5RUtAaKQBig7CaiAPqgjGRoZNiKYdmnbeJyzaF1T59EVokr9n5",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.11",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.12",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init6",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ52DRPuXyHDzLqokSsQRBSqA12S4im7RNL1a6ampSjfKWZqDKSP",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ52DRPuXyHDzLqokSsQRBSqA12S4im7RNL1a6ampSjfKWZqDKSP",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ52DRPuXyHDzLqokSsQRBSqA12S4im7RNL1a6ampSjfKWZqDKSP",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.12",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.13",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init7",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5GxVsuXtSP9V6PBvf8Z2xTazjeHLYTTAXo1hJ4pXBRahXWtWZX",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ5GxVsuXtSP9V6PBvf8Z2xTazjeHLYTTAXo1hJ4pXBRahXWtWZX",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ5GxVsuXtSP9V6PBvf8Z2xTazjeHLYTTAXo1hJ4pXBRahXWtWZX",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.13",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.14",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init8",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7BxmtArywMc6rY7s29TH63AKVSWZyNWC29JjNaRNCTWAgGjgnJ",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7BxmtArywMc6rY7s29TH63AKVSWZyNWC29JjNaRNCTWAgGjgnJ",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ7BxmtArywMc6rY7s29TH63AKVSWZyNWC29JjNaRNCTWAgGjgnJ",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.14",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.15",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init9",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ75hmgrBwQaLyocyEUqjtWVwGc1GBapWVQws6NDe7MgCuLEqtEb",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ75hmgrBwQaLyocyEUqjtWVwGc1GBapWVQws6NDe7MgCuLEqtEb",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ75hmgrBwQaLyocyEUqjtWVwGc1GBapWVQws6NDe7MgCuLEqtEb",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.15",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.16",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init10",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7jcCAgg3b4fmQ1JiXMsehZwTN9x12Ga9PU3C5fJBuqaT3o4yKk",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7jcCAgg3b4fmQ1JiXMsehZwTN9x12Ga9PU3C5fJBuqaT3o4yKk",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ7jcCAgg3b4fmQ1JiXMsehZwTN9x12Ga9PU3C5fJBuqaT3o4yKk",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.16",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.17",
+      "membership_expiration_date": "2106-02-07T06:28:15",
+      "registrar": "1.2.4",
+      "referrer": "1.2.0",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 8000,
+      "referrer_rewards_percentage": 0,
+      "name": "init11",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ6AXATmsf2sohyBXVUJserubj6qSeV8yXLbuqYrcecoeJewfZFX",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ6AXATmsf2sohyBXVUJserubj6qSeV8yXLbuqYrcecoeJewfZFX",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ6AXATmsf2sohyBXVUJserubj6qSeV8yXLbuqYrcecoeJewfZFX",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 0,
+        "votes": [],
+        "extensions": []
+      },
+      "statistics": "2.6.17",
+      "whitelisting_accounts": [],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    },{
+      "id": "1.2.264",
+      "membership_expiration_date": "1970-01-01T00:00:00",
+      "registrar": "1.2.28",
+      "referrer": "1.2.27",
+      "lifetime_referrer": "1.2.0",
+      "network_fee_percentage": 2000,
+      "lifetime_referrer_fee_percentage": 3000,
+      "referrer_rewards_percentage": 0,
+      "name": "merchant-netizens",
+      "owner": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7L99dnVvPFjEveE3qcJ9pD1da7NAPfpdVYhw5LriVLYSSVszf3",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "active": {
+        "weight_threshold": 1,
+        "account_auths": [],
+        "key_auths": [[
+            "NTZ7L99dnVvPFjEveE3qcJ9pD1da7NAPfpdVYhw5LriVLYSSVszf3",
+            1
+          ]
+        ],
+        "address_auths": []
+      },
+      "options": {
+        "memo_key": "NTZ7L99dnVvPFjEveE3qcJ9pD1da7NAPfpdVYhw5LriVLYSSVszf3",
+        "voting_account": "1.2.5",
+        "num_witness": 0,
+        "num_committee": 11,
+        "votes": [
+          "0:22",
+          "0:23",
+          "0:24",
+          "0:25",
+          "0:26",
+          "0:27",
+          "0:28",
+          "0:29",
+          "0:30",
+          "0:31",
+          "0:32"
+        ],
+        "extensions": []
+      },
+      "statistics": "2.6.264",
+      "whitelisting_accounts": [
+        "1.2.27"
+      ],
+      "blacklisting_accounts": [],
+      "whitelisted_accounts": [],
+      "blacklisted_accounts": [],
+      "cashback_vb": "1.13.53",
+      "owner_special_authority": [
+        0,{}
+      ],
+      "active_special_authority": [
+        0,{}
+      ],
+      "top_n_control_flags": 0,
+      "referral_levels": 0,
+      "referral_status_type": 0,
+      "referral_status_paid_fee": 0,
+      "referral_status_expiration_date": "1970-01-01T00:00:00",
+      "status_denominator": 10000
+    }
+  ],
+  "cipher_keys": "581d042f19043417a8c989c5e46b7e9a25fdf26350b15000cca993f33e847aa4e6bf73cbf63b961cc9c0b3fc77b7d117ed61d7c9645168e46b8f5e2e25933d8f8a3a7006f2c45e27aab4db60451370a4aa875ecb2bc50a2cdd9ae609df78eae7412f075bf22ff71f75c545aa59ff3f58b09a2d633e90920fe30e6cfb94b1c85805f3ad45d41fbc536c3c8088ca48c85d50e4d14f4aaa470f8acc5d1dd2481e155ce0d403b73e2781732af77dda99dd82cb5d63070ec5a78a8ecd338f396ea765967df04b2c4aaae2c653411dcf74e634f805795d57a41d70fa09a1e7c320a15a1aeb216d28c4211a8d9728ceefc88c3aaa101b8c3c685cd6ec09b7e0b7c49b55f534fc3b35f174e8b7fb24bc60d77e1f41149d241d14667d090ea9583d4611c96eb48f025689002abe2b015cf00f86d846c230099a2124669494d46b58b48adb6e01aaca8f9ef1a27892417d240582c9c14f50da9f1134b4b58eda23492cec2da0994b28b7c69fca72c9651714d2e3eeb506fb0954b10c7ae35db403b18d0a46de8c77a41775dbada5f2d3391e76d4619cda30e10c3d72ba7a0942f6749d819ba5378abc2585ac20bf7ac50e9660c3c47127db3a9aaa7d75fd6df7a76f1cb7fe9ec1c01a9fe292710bda45ab18300dd339509c6482d4bb70ffd6747790011bcb0c609ea9cca2176b3df23717c6c6e8074bdfca9dcc5fc2934fe2b007b6d96473979eb11536df2c95b1f22d36fc8124917672996679739c99dcbc4bc8ed87aa2f3df4037746ec1987f7a920b7b9f7d38d544a9e6a7da75f3299fc0d089362a5aa9299fe13e37933544f3217c2b0abeef5c652a1e2bc94708900c32a2e49a23d108c1cddb794a0993d6180db8486837ed23ae176abd4de6305b103bd3fa4b7f254280d6f69618e2f95afc28a981c27d66714c5fc83d20ce5db3dc62fa025eebf436e584330786386607be0250b824889b73d9baba52078b9de5a9c1e88de1adcea2dee25844bf916fb3dc9cf214f45cc3e90a379654687db7da0041b52a1c3051339d61a835e9ff1206ad557a18b5a1f48124f57b1165b84d5cdc65ef020233d7fd7ac19760edf18dc723e6ceb2120f9be344ab849e5030f79048cb74fdb09a5ceadb97c6aa5d68c40fc6169bd170b3122c8547720a3798132722eab04a9f59e2bee28a34e39d7ffdb7ee32d7942405ace15d00c7b3becd348d53029fbcab12a17a1deafe7470717f4d97ad75c84d9a29bf2cc50da5d647968fb9a7041d99bef66f99e03ffdd8f1e61f459ff981800ff3ee5c6ad7edee5d59cf5194b16a129efd1fcfda625bde3fef635824ff0ac1bed0ebd34252e1d85248486d0c016e952cdabdd85623a09b023821b3921f64419c0a1636b8efac2b8fcc6006c84a5f958f9a4bc76d65e280618384125ee466ba908a854d596ac68ab9ed7270b3a2c2f346e0150c9ca9eab8256a9d5a0829a54c591725cdd32fab7ba242404e4ea9b4ed8435262c4212b9ec3a9eaab218dc27d4758f05fe43ab763eadde2e6e6997cdcd4afaf3a4217fbb32e1bc5e7bcc9888ef987f10526484ae5696ed98008df946c282e522a6c448d7e499933d6b8bafeb6ba3cb3d9c35f3574577d8304c3bc6bcf23dd4e01d7465a51081210788988c7e292d47cb8d72efbd6a6178ea91434bcdb21a3fd",
+  "extra_keys": [[
+      "1.2.6",[
+        "NTZ6RYYsJtZRepJmKnmS7trdwJ7QgYRiPtco4PKkZqXHcxyWXjPCU"
+      ]
+    ],[
+      "1.2.7",[
+        "NTZ5qrJRLDJCDPHuSbGByR2HSc42dniqqAcGgBFrMr97wiZeNb6TQ"
+      ]
+    ],[
+      "1.2.8",[
+        "NTZ5LEncARvrnkaLms7ykchomcE5cVRmsQvdFNaPPtk38xzLSSDyg"
+      ]
+    ],[
+      "1.2.9",[
+        "NTZ7UJmatmv1q3v2jWkNQ6W8HB2cX1SFuiDvHwcue2HRzs7zBap4e"
+      ]
+    ],[
+      "1.2.10",[
+        "NTZ7b2Pphn79dA7qiNsDUJvrbdFsj7yzptbi9BY61Z7jxKY1iB1pt"
+      ]
+    ],[
+      "1.2.11",[
+        "NTZ5RUtAaKQBig7CaiAPqgjGRoZNiKYdmnbeJyzaF1T59EVokr9n5"
+      ]
+    ],[
+      "1.2.12",[
+        "NTZ52DRPuXyHDzLqokSsQRBSqA12S4im7RNL1a6ampSjfKWZqDKSP"
+      ]
+    ],[
+      "1.2.13",[
+        "NTZ5GxVsuXtSP9V6PBvf8Z2xTazjeHLYTTAXo1hJ4pXBRahXWtWZX"
+      ]
+    ],[
+      "1.2.14",[
+        "NTZ7BxmtArywMc6rY7s29TH63AKVSWZyNWC29JjNaRNCTWAgGjgnJ"
+      ]
+    ],[
+      "1.2.15",[
+        "NTZ75hmgrBwQaLyocyEUqjtWVwGc1GBapWVQws6NDe7MgCuLEqtEb"
+      ]
+    ],[
+      "1.2.16",[
+        "NTZ7jcCAgg3b4fmQ1JiXMsehZwTN9x12Ga9PU3C5fJBuqaT3o4yKk"
+      ]
+    ],[
+      "1.2.17",[
+        "NTZ6AXATmsf2sohyBXVUJserubj6qSeV8yXLbuqYrcecoeJewfZFX"
+      ]
+    ],[
+      "1.2.264",[
+        "NTZ7L99dnVvPFjEveE3qcJ9pD1da7NAPfpdVYhw5LriVLYSSVszf3"
+      ]
+    ]
+  ],
+  "pending_account_registrations": [],
+  "pending_witness_registrations": [],
+  "labeled_keys": [],
+  "blind_receipts": [],
+  "ws_server": "wss://ntz.team/ws",
+  "ws_user": "",
+  "ws_password": ""
+}

@@ -344,6 +344,112 @@ namespace graphene { namespace chain {
       share_type      calculate_fee( const fee_parameters_type& k )const;
    };
 
+
+   struct account_transfer_buy_package_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_make_purchase_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_info_merchant_percent_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_physical_merchant_percent_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_mkt_small_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_cashback_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      string                  from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
+   struct account_transfer_leader_operation : public base_operation // VIRTUAL
+   {
+      struct fee_parameters_type { };
+      asset                   fee;
+      optional<account_id_type> from;
+      account_id_type         to;
+      asset                   amount;
+
+      account_id_type         fee_payer()const { return to; }
+      void                    validate()const;
+
+      /// This is a virtual operation; there is no fee
+      share_type      calculate_fee(const fee_parameters_type& k)const { return 0; }
+   };
+
 } } // graphene::chain
 
 FC_REFLECT(graphene::chain::account_options, (memo_key)(voting_account)(num_witness)(num_committee)(votes)(extensions))
@@ -384,3 +490,19 @@ FC_REFLECT( graphene::chain::account_status_upgrade_operation,(fee)(account_to_u
 FC_REFLECT( graphene::chain::account_status_give_operation,(fee)(account_to_upgrade)(giver)(referral_status_type)(start_bonus) )
 FC_REFLECT( graphene::chain::account_give_pa_operation,(fee)(account_to_upgrade)(giver)(referral_status_type) )
 FC_REFLECT( graphene::chain::account_status_give_light_operation,(fee)(account_to_upgrade)(giver)(referral_status_type)(ntz_amount)(start_bonus) )
+
+FC_REFLECT( graphene::chain::account_transfer_buy_package_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_make_purchase_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_info_merchant_percent_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_physical_merchant_percent_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_mkt_small_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_cashback_operation::fee_parameters_type, )// VIRTUAL
+FC_REFLECT( graphene::chain::account_transfer_leader_operation::fee_parameters_type, )// VIRTUAL
+
+FC_REFLECT( graphene::chain::account_transfer_buy_package_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_make_purchase_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_info_merchant_percent_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_physical_merchant_percent_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_mkt_small_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_cashback_operation, (fee)(from)(to)(amount) )
+FC_REFLECT( graphene::chain::account_transfer_leader_operation, (fee)(from)(to)(amount) )

@@ -123,9 +123,16 @@ void_result vesting_balance_withdraw_evaluator::do_evaluate( const vesting_balan
                FC_ASSERT(current_pv >= params.status_threshold_02,"You must have more sales");
             }
             else {
-                  if (owner.referral_status_type == 3 && current_pv < params.status_threshold_03) {
+               if (owner.referral_status_type == 3 && current_pv < params.status_threshold_03) {
                   FC_ASSERT(current_pv >= params.status_threshold_03,"You must have more sales");
-               }                        
+               } else {
+                  if( d.head_block_time() >= HARDFORK_NTZ_7_TIME ) {
+
+                     if ((owner.referral_status_type == 0  || owner.referral_status_type == 10) && current_pv < params.status_threshold_10) {
+                        FC_ASSERT(current_pv >= params.status_threshold_10,"You must have more sales");
+                     }
+                  }
+               }                                         
             }
          }
       }

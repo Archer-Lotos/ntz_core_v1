@@ -29,6 +29,8 @@
 #include <graphene/chain/vesting_balance_object.hpp>
 #include <graphene/chain/witness_object.hpp>
 
+#include <graphene/chain/hardfork.hpp>
+
 namespace graphene { namespace chain {
 
 asset database::get_balance(account_id_type owner, asset_id_type asset_id) const
@@ -167,6 +169,16 @@ void database::deposit_cashback(const account_object& acct, share_type amount, b
       {
          aso.has_cashback_vb = true;
       } );
+
+      auto maint_time = get_dynamic_global_properties().next_maintenance_time;
+
+      if( maint_time >= HARDFORK_NTZ_7_TIME ) {
+         account_transfer_cashback_operation at_cashback;
+         at_cashback.from = "system";
+         at_cashback.to = acct.get_id();
+         at_cashback.amount = amount;
+         push_applied_operation( at_cashback );
+      }
    }
 
    return;

@@ -346,4 +346,39 @@ void account_status_give_light_operation::validate() const
    FC_ASSERT( referral_status_type <= 3);
 }
 
+void account_transfer_buy_package_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_make_purchase_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_info_merchant_percent_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_physical_merchant_percent_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_mkt_small_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_cashback_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
+void account_transfer_leader_operation::validate()const
+{
+FC_ASSERT( fee.amount >= 0, "Fee amount should not be negative" );
+}
+
 } } // graphene::chain

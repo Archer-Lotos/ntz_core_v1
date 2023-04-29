@@ -109,6 +109,7 @@ namespace graphene { namespace chain {
       share_type              status_threshold_01                 = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(20000));
       share_type              status_threshold_02                 = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(10000));
       share_type              status_threshold_03                 = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(0));
+      share_type              status_threshold_10                 = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(2500));
       share_type              status_bonus_reward_01              = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(6000));
       share_type              status_bonus_reward_02              = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(30000));
       share_type              status_bonus_reward_03              = (GRAPHENE_BLOCKCHAIN_PRECISION * int64_t(60000));
@@ -204,6 +205,7 @@ FC_REFLECT( graphene::chain::chain_parameters,
             (status_threshold_01)
             (status_threshold_02)
             (status_threshold_03)
+            (status_threshold_10)
             (status_bonus_reward_01)
             (status_bonus_reward_02)
             (status_bonus_reward_03)

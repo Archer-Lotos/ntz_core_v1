@@ -315,6 +315,37 @@ struct get_impacted_account_visitor
       _impacted.insert( op.account_to_upgrade ); // account_to_upgrade
       _impacted.insert( op.fee_payer() ); // giver
    }
+
+   // account_transfer
+
+   void operator()( const account_transfer_buy_package_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_make_purchase_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_info_merchant_percent_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_physical_merchant_percent_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_mkt_small_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_cashback_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
+   void operator()( const account_transfer_leader_operation& op )
+   {
+      _impacted.insert( op.fee_payer() );
+   }
 };
 
 void graphene::chain::operation_get_impacted_accounts( const operation& op, flat_set<account_id_type>& result )

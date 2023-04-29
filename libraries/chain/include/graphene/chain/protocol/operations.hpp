@@ -108,7 +108,14 @@ namespace graphene { namespace chain {
             account_give_pa_operation,
             account_status_invoice_create_operation,
             account_status_invoice_pay_operation,
-            account_status_give_light_operation
+            account_status_give_light_operation,
+            account_transfer_buy_package_operation,// VIRTUAL
+            account_transfer_make_purchase_operation,// VIRTUAL
+            account_transfer_info_merchant_percent_operation,// VIRTUAL
+            account_transfer_physical_merchant_percent_operation,// VIRTUAL
+            account_transfer_mkt_small_operation,// VIRTUAL
+            account_transfer_cashback_operation,// VIRTUAL
+            account_transfer_leader_operation// VIRTUAL
          > operation;
 
    /// @} // operations group

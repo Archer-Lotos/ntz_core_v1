@@ -7,6 +7,7 @@
 #include <graphene/chain/invoice_evaluator.hpp>
 #include <graphene/chain/invoice_object.hpp>
 #include <graphene/chain/account_object.hpp>
+// #include <graphene/chain/protocol/account.hpp>
 #include <graphene/chain/database.hpp>
 #include <graphene/chain/hardfork.hpp>
 
@@ -360,6 +361,20 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                 db().adjust_balance(op.merchant, cut_fee_reward(invoice->ntz_amount.amount - op.bonus_amount.amount, merchant_percent));
                 db().adjust_balance(op.merchant, op.core_amount.amount + op.bonus_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount);
 
+                if( d.head_block_time() >= HARDFORK_NTZ_7_TIME ) {
+                    account_transfer_physical_merchant_percent_operation at_merchant;
+                    at_merchant.from = op.payer;
+                    at_merchant.to = op.merchant;
+                    at_merchant.amount = cut_fee_reward(invoice->ntz_amount.amount - op.bonus_amount.amount, merchant_percent);
+                    db().push_applied_operation( at_merchant );
+
+                    account_transfer_mkt_small_operation at_mkt;
+                    at_mkt.from = op.payer;
+                    at_mkt.to = op.merchant;
+                    at_mkt.amount = op.core_amount.amount + op.bonus_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount;
+                    db().push_applied_operation( at_mkt );
+                }
+
                 if( d.head_block_time() <= HARDFORK_NTZ_5_TIME ) {
                     customer_account.statistics(d).update_nv(invoice->ntz_amount.amount - op.bonus_amount.amount, uint8_t(1) , uint8_t(0) , customer_account, d);
                 } else {
@@ -553,6 +568,20 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
                 db().adjust_balance(op.payer, -op.core_amount);
                 db().adjust_balance(op.merchant, cut_fee_reward(invoice->ntz_amount.amount, merchant_percent));
                 db().adjust_balance(op.merchant, op.core_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount);
+
+                if( d.head_block_time() >= HARDFORK_NTZ_7_TIME ) {
+                    account_transfer_physical_merchant_percent_operation at_merchant;
+                    at_merchant.from = op.payer;
+                    at_merchant.to = op.merchant;
+                    at_merchant.amount = cut_fee_reward(invoice->ntz_amount.amount, merchant_percent);
+                    db().push_applied_operation( at_merchant );
+
+                    account_transfer_mkt_small_operation at_mkt;
+                    at_mkt.from = op.payer;
+                    at_mkt.to = op.merchant;
+                    at_mkt.amount = op.core_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount;
+                    db().push_applied_operation( at_mkt );
+                }
 
                 customer_account.statistics(d).update_nv(invoice->ntz_amount.amount, uint8_t(1) , uint8_t(0) , customer_account, d);
 
