@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/programs/network_mapper/network_mapper.cpp
+/root/ntzcore2/programs/network_mapper/network_mapper.cpp
 fc/crypto/elliptic.hpp
 -
 fc/io/json.hpp

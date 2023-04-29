@@ -1,0 +1,38 @@
+File "/root/ntzcore2/libraries/chain/include/graphene/chain/hardfork.hpp" up-to-date with .d directory
+In file included from /root/ntzcore2/libraries/chain/include/graphene/chain/exceptions.hpp:26:0,
+                 from /root/ntzcore2/libraries/chain/include/graphene/chain/evaluator.hpp:25,
+                 from /root/ntzcore2/libraries/chain/include/graphene/chain/invoice_evaluator.hpp:8,
+                 from /root/ntzcore2/libraries/chain/invoice_evaluator.cpp:7:
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp: In member function ‘graphene::chain::void_result graphene::chain::account_status_invoice_create_evaluator::do_evaluate(const graphene::chain::account_status_invoice_create_operation&)’:
+/root/ntzcore2/libraries/fc/include/fc/log/logger.hpp:67:34: error: expected ‘;’ before ‘do’
+ #define FC_MULTILINE_MACRO_BEGIN do {
+                                  ^
+/root/ntzcore2/libraries/fc/include/fc/exception/exception.hpp:323:30: note: in definition of macro ‘FC_EXPAND_MACRO’
+ #define FC_EXPAND_MACRO( x ) x
+                              ^
+/root/ntzcore2/libraries/fc/include/fc/exception/exception.hpp:329:5: note: in expansion of macro ‘FC_MULTILINE_MACRO_BEGIN’
+     FC_MULTILINE_MACRO_BEGIN \
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp:434:13: note: in expansion of macro ‘FC_ASSERT’
+             FC_ASSERT(admin.whitelisted_accounts.find(merchant.id) != admin.whitelisted_accounts.end(), "Not allowed merchant!");
+             ^
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp: At global scope:
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp:445:20: error: prototype for ‘graphene::db::object_id_type graphene::chain::account_status_invoice_create_evaluator::do_apply(const graphene::chain::account_status_invoice_create_operation&)’ does not match any in class ‘graphene::chain::account_status_invoice_create_evaluator’
+     object_id_type account_status_invoice_create_evaluator::do_apply(const account_status_invoice_create_operation &op)
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /root/ntzcore2/libraries/chain/invoice_evaluator.cpp:7:0:
+/root/ntzcore2/libraries/chain/include/graphene/chain/invoice_evaluator.hpp:58:19: error: candidate is: graphene::chain::void_result graphene::chain::account_status_invoice_create_evaluator::do_apply(const operation_type&)
+       void_result do_apply(const operation_type& o);
+                   ^~~~~~~~
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp: In member function ‘graphene::chain::void_result graphene::chain::account_status_invoice_pay_evaluator::do_apply(const graphene::chain::account_status_invoice_pay_operation&)’:
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp:549:17: error: expected ‘)’ before ‘db’
+                 db().adjust_balance(op.payer, -op.core_amount);
+                 ^~
+make[2]: *** [libraries/chain/CMakeFiles/graphene_chain.dir/invoice_evaluator.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [libraries/chain/CMakeFiles/graphene_chain.dir/database.cpp.o] Interrupt
+make[2]: *** [libraries/chain/CMakeFiles/graphene_chain.dir/block_database.cpp.o] Interrupt
+make[2]: *** [libraries/net/CMakeFiles/graphene_net.dir/node.cpp.o] Interrupt
+make[1]: *** [libraries/net/CMakeFiles/graphene_net.dir/all] Interrupt
+make[1]: *** [libraries/chain/CMakeFiles/graphene_chain.dir/all] Interrupt
+make: *** [all] Interrupt

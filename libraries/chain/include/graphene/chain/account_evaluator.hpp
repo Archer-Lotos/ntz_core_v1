@@ -90,4 +90,16 @@ public:
 
    const account_object* account;
 };
+
+class account_give_pa_evaluator : public evaluator<account_give_pa_evaluator>
+{
+public:
+   typedef account_give_pa_operation operation_type;
+
+   void_result do_evaluate(const operation_type& o);
+   void_result do_apply(const operation_type& o);
+
+   const account_object* account;
+};
+
 } } // graphene::chain

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/wallet/api_documentation.cpp
+/root/ntzcore2/libraries/wallet/api_documentation.cpp
 set
 -
 graphene/wallet/api_documentation.hpp
@@ -14,7 +14,7 @@ graphene/wallet/api_documentation.hpp
 graphene/wallet/wallet.hpp
 -
 
-/root/ntzcore/libraries/wallet/wallet.cpp
+/root/ntzcore2/libraries/wallet/wallet.cpp
 algorithm
 -
 cctype

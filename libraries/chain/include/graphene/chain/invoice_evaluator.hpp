@@ -7,6 +7,7 @@
 #pragma once
 #include <graphene/chain/evaluator.hpp>
 #include <graphene/chain/invoice_object.hpp>
+#include <graphene/chain/account_object.hpp>
 
 namespace graphene { namespace chain {
 
@@ -48,5 +49,27 @@ namespace graphene { namespace chain {
         const new_invoice_object* invoice;
    };
 
+   class account_status_invoice_create_evaluator : public evaluator<account_status_invoice_create_evaluator>
+   {
+   public:
+      typedef account_status_invoice_create_operation operation_type;
+
+      void_result do_evaluate(const operation_type& o);
+      void_result do_apply(const operation_type& o);
+
+      const account_object* account;
+   };
+
+   class account_status_invoice_pay_evaluator : public evaluator<account_status_invoice_pay_evaluator>
+   {
+   public:
+      typedef account_status_invoice_pay_operation operation_type;
+
+      void_result do_evaluate(const operation_type& o);
+      void_result do_apply(const operation_type& o);
+
+      const account_object* account;
+      const new_invoice_object* invoice;
+   };
 
 } } // graphene::chain

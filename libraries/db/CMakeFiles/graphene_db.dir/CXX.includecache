@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/db/index.cpp
+/root/ntzcore2/libraries/db/index.cpp
 fc/io/raw.hpp
 -
 graphene/db/index.hpp
@@ -14,7 +14,7 @@ graphene/db/index.hpp
 graphene/db/object_database.hpp
 -
 
-/root/ntzcore/libraries/db/object_database.cpp
+/root/ntzcore2/libraries/db/object_database.cpp
 graphene/db/object_database.hpp
 -
 fc/io/raw.hpp
@@ -26,7 +26,7 @@ fc/thread/parallel.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/db/undo_database.cpp
+/root/ntzcore2/libraries/db/undo_database.cpp
 graphene/db/object_database.hpp
 -
 graphene/db/undo_database.hpp

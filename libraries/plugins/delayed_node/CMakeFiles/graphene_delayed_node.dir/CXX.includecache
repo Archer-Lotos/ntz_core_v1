@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/plugins/delayed_node/delayed_node_plugin.cpp
+/root/ntzcore2/libraries/plugins/delayed_node/delayed_node_plugin.cpp
 graphene/delayed_node/delayed_node_plugin.hpp
 -
 graphene/chain/protocol/types.hpp

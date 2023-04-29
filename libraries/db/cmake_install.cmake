@@ -32,20 +32,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/ntzcore2/libraries/db/libgraphene_db.a")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/graphene/db" TYPE FILE FILES
-    "/root/ntzcore2/libraries/db/include/graphene/db/generic_index.hpp"
-    "/root/ntzcore2/libraries/db/include/graphene/db/object.hpp"
     "/root/ntzcore2/libraries/db/include/graphene/db/fwd.hpp"
-    "/root/ntzcore2/libraries/db/include/graphene/db/undo_database.hpp"
-    "/root/ntzcore2/libraries/db/include/graphene/db/simple_index.hpp"
-    "/root/ntzcore2/libraries/db/include/graphene/db/object_id.hpp"
+    "/root/ntzcore2/libraries/db/include/graphene/db/generic_index.hpp"
     "/root/ntzcore2/libraries/db/include/graphene/db/index.hpp"
+    "/root/ntzcore2/libraries/db/include/graphene/db/object.hpp"
     "/root/ntzcore2/libraries/db/include/graphene/db/object_database.hpp"
+    "/root/ntzcore2/libraries/db/include/graphene/db/object_id.hpp"
+    "/root/ntzcore2/libraries/db/include/graphene/db/simple_index.hpp"
+    "/root/ntzcore2/libraries/db/include/graphene/db/undo_database.hpp"
     )
 endif()
 

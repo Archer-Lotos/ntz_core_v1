@@ -38,4 +38,18 @@ namespace graphene { namespace chain {
     FC_ASSERT( core_amount.amount > 0 || bonus_amount.amount > 0);
     }
 
+    void account_status_invoice_create_operation::validate()const
+    {
+    FC_ASSERT( fee.amount >= 0 );
+    FC_ASSERT( amount.amount > 0 );
+    FC_ASSERT( tax.amount >= 0 );
+    FC_ASSERT( delivery.amount >= 0 );
+    FC_ASSERT( ntz_amount.amount >= 0 );
+    }
+
+    void account_status_invoice_pay_operation::validate()const
+    {
+    FC_ASSERT( fee.amount >= 0 );
+    FC_ASSERT( core_amount.amount > 0 );
+    }
 } } // graphene::chain

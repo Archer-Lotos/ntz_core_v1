@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/programs/genesis_util/convert_address.cpp
+/root/ntzcore2/programs/genesis_util/convert_address.cpp
 graphene/chain/pts_address.hpp
 -
 graphene/chain/protocol/address.hpp

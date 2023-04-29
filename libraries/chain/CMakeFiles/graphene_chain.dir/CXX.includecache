@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/chain/account_evaluator.cpp
+/root/ntzcore2/libraries/chain/account_evaluator.cpp
 graphene/chain/account_evaluator.hpp
 -
 graphene/chain/buyback.hpp
@@ -34,7 +34,7 @@ graphene/chain/worker_object.hpp
 algorithm
 -
 
-/root/ntzcore/libraries/chain/account_object.cpp
+/root/ntzcore2/libraries/chain/account_object.cpp
 graphene/chain/account_object.hpp
 -
 graphene/chain/asset_object.hpp
@@ -46,7 +46,7 @@ graphene/chain/hardfork.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/chain/assert_evaluator.cpp
+/root/ntzcore2/libraries/chain/assert_evaluator.cpp
 graphene/chain/assert_evaluator.hpp
 -
 graphene/chain/block_summary_object.hpp
@@ -56,7 +56,7 @@ graphene/chain/database.hpp
 sstream
 -
 
-/root/ntzcore/libraries/chain/asset_evaluator.cpp
+/root/ntzcore2/libraries/chain/asset_evaluator.cpp
 graphene/chain/asset_evaluator.hpp
 -
 graphene/chain/asset_object.hpp
@@ -78,7 +78,7 @@ functional
 locale
 -
 
-/root/ntzcore/libraries/chain/asset_object.cpp
+/root/ntzcore2/libraries/chain/asset_object.cpp
 graphene/chain/asset_object.hpp
 -
 graphene/chain/database.hpp
@@ -88,11 +88,11 @@ fc/uint128.hpp
 cmath
 -
 
-/root/ntzcore/libraries/chain/balance_evaluator.cpp
+/root/ntzcore2/libraries/chain/balance_evaluator.cpp
 graphene/chain/balance_evaluator.hpp
 -
 
-/root/ntzcore/libraries/chain/block_database.cpp
+/root/ntzcore2/libraries/chain/block_database.cpp
 graphene/chain/block_database.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp
@@ -100,7 +100,7 @@ graphene/chain/protocol/fee_schedule.hpp
 fc/io/raw.hpp
 -
 
-/root/ntzcore/libraries/chain/buyback.cpp
+/root/ntzcore2/libraries/chain/buyback.cpp
 graphene/chain/protocol/buyback.hpp
 -
 graphene/chain/database.hpp
@@ -110,7 +110,7 @@ graphene/chain/exceptions.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/committee_member_evaluator.cpp
+/root/ntzcore2/libraries/chain/committee_member_evaluator.cpp
 graphene/chain/committee_member_evaluator.hpp
 -
 graphene/chain/committee_member_object.hpp
@@ -126,7 +126,7 @@ graphene/chain/protocol/vote.hpp
 graphene/chain/transaction_evaluation_state.hpp
 -
 
-/root/ntzcore/libraries/chain/confidential_evaluator.cpp
+/root/ntzcore2/libraries/chain/confidential_evaluator.cpp
 graphene/chain/exceptions.hpp
 -
 graphene/chain/protocol/confidential.hpp
@@ -142,31 +142,31 @@ graphene/chain/fba_accumulator_id.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/database.cpp
+/root/ntzcore2/libraries/chain/database.cpp
 db_balance.cpp
-/root/ntzcore/libraries/chain/db_balance.cpp
+/root/ntzcore2/libraries/chain/db_balance.cpp
 db_block.cpp
-/root/ntzcore/libraries/chain/db_block.cpp
+/root/ntzcore2/libraries/chain/db_block.cpp
 db_debug.cpp
-/root/ntzcore/libraries/chain/db_debug.cpp
+/root/ntzcore2/libraries/chain/db_debug.cpp
 db_getter.cpp
-/root/ntzcore/libraries/chain/db_getter.cpp
+/root/ntzcore2/libraries/chain/db_getter.cpp
 db_init.cpp
-/root/ntzcore/libraries/chain/db_init.cpp
+/root/ntzcore2/libraries/chain/db_init.cpp
 db_maint.cpp
-/root/ntzcore/libraries/chain/db_maint.cpp
+/root/ntzcore2/libraries/chain/db_maint.cpp
 db_management.cpp
-/root/ntzcore/libraries/chain/db_management.cpp
+/root/ntzcore2/libraries/chain/db_management.cpp
 db_market.cpp
-/root/ntzcore/libraries/chain/db_market.cpp
+/root/ntzcore2/libraries/chain/db_market.cpp
 db_update.cpp
-/root/ntzcore/libraries/chain/db_update.cpp
+/root/ntzcore2/libraries/chain/db_update.cpp
 db_witness_schedule.cpp
-/root/ntzcore/libraries/chain/db_witness_schedule.cpp
+/root/ntzcore2/libraries/chain/db_witness_schedule.cpp
 db_notify.cpp
-/root/ntzcore/libraries/chain/db_notify.cpp
+/root/ntzcore2/libraries/chain/db_notify.cpp
 
-/root/ntzcore/libraries/chain/db_balance.cpp
+/root/ntzcore2/libraries/chain/db_balance.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/account_object.hpp
@@ -178,7 +178,7 @@ graphene/chain/vesting_balance_object.hpp
 graphene/chain/witness_object.hpp
 -
 
-/root/ntzcore/libraries/chain/db_block.cpp
+/root/ntzcore2/libraries/chain/db_block.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/db_with.hpp
@@ -206,7 +206,7 @@ graphene/chain/evaluator.hpp
 fc/thread/parallel.hpp
 -
 
-/root/ntzcore/libraries/chain/db_debug.cpp
+/root/ntzcore2/libraries/chain/db_debug.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/account_object.hpp
@@ -222,7 +222,7 @@ graphene/chain/witness_object.hpp
 graphene/chain/fba_object.hpp
 -
 
-/root/ntzcore/libraries/chain/db_getter.cpp
+/root/ntzcore2/libraries/chain/db_getter.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/asset_object.hpp
@@ -232,7 +232,7 @@ graphene/chain/chain_property_object.hpp
 graphene/chain/global_property_object.hpp
 -
 
-/root/ntzcore/libraries/chain/db_init.cpp
+/root/ntzcore2/libraries/chain/db_init.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/fba_accumulator_id.hpp
@@ -320,7 +320,7 @@ fc/crypto/digest.hpp
 boost/algorithm/string.hpp
 -
 
-/root/ntzcore/libraries/chain/db_maint.cpp
+/root/ntzcore2/libraries/chain/db_maint.cpp
 boost/multiprecision/integer.hpp
 -
 fc/uint128.hpp
@@ -360,7 +360,7 @@ graphene/chain/witness_object.hpp
 graphene/chain/worker_object.hpp
 -
 
-/root/ntzcore/libraries/chain/db_management.cpp
+/root/ntzcore2/libraries/chain/db_management.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/chain_property_object.hpp
@@ -386,7 +386,7 @@ queue
 tuple
 -
 
-/root/ntzcore/libraries/chain/db_market.cpp
+/root/ntzcore2/libraries/chain/db_market.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/account_object.hpp
@@ -400,7 +400,7 @@ graphene/chain/market_object.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/chain/db_notify.cpp
+/root/ntzcore2/libraries/chain/db_notify.cpp
 fc/container/flat.hpp
 -
 graphene/chain/protocol/authority.hpp
@@ -436,7 +436,7 @@ graphene/chain/invoice_object.hpp
 graphene/chain/impacted.hpp
 -
 
-/root/ntzcore/libraries/chain/db_update.cpp
+/root/ntzcore2/libraries/chain/db_update.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/db_with.hpp
@@ -462,7 +462,7 @@ graphene/chain/protocol/fee_schedule.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/chain/db_witness_schedule.cpp
+/root/ntzcore2/libraries/chain/db_witness_schedule.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/global_property_object.hpp
@@ -472,7 +472,7 @@ graphene/chain/witness_object.hpp
 graphene/chain/witness_schedule_object.hpp
 -
 
-/root/ntzcore/libraries/chain/evaluator.cpp
+/root/ntzcore2/libraries/chain/evaluator.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/evaluator.hpp
@@ -500,7 +500,7 @@ graphene/chain/protocol/fee_schedule.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/chain/fba_object.cpp
+/root/ntzcore2/libraries/chain/fba_object.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/evaluator.hpp
@@ -508,19 +508,19 @@ graphene/chain/evaluator.hpp
 graphene/chain/fba_object.hpp
 -
 
-/root/ntzcore/libraries/chain/fork_database.cpp
+/root/ntzcore2/libraries/chain/fork_database.cpp
 graphene/chain/fork_database.hpp
 -
 graphene/chain/exceptions.hpp
 -
 
-/root/ntzcore/libraries/chain/genesis_state.cpp
+/root/ntzcore2/libraries/chain/genesis_state.cpp
 graphene/chain/genesis_state.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp
 -
 
-/root/ntzcore/libraries/chain/get_config.cpp
+/root/ntzcore2/libraries/chain/get_config.cpp
 graphene/chain/get_config.hpp
 -
 graphene/chain/config.hpp
@@ -528,7 +528,7 @@ graphene/chain/config.hpp
 graphene/chain/protocol/types.hpp
 -
 
-/root/ntzcore/libraries/chain/invoice_evaluator.cpp
+/root/ntzcore2/libraries/chain/invoice_evaluator.cpp
 graphene/chain/invoice_evaluator.hpp
 -
 graphene/chain/invoice_object.hpp
@@ -540,7 +540,7 @@ graphene/chain/database.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/is_authorized_asset.cpp
+/root/ntzcore2/libraries/chain/is_authorized_asset.cpp
 graphene/chain/account_object.hpp
 -
 graphene/chain/asset_object.hpp
@@ -550,7 +550,7 @@ graphene/chain/database.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/market_evaluator.cpp
+/root/ntzcore2/libraries/chain/market_evaluator.cpp
 graphene/chain/account_object.hpp
 -
 graphene/chain/asset_object.hpp
@@ -572,13 +572,13 @@ graphene/chain/protocol/market.hpp
 fc/uint128.hpp
 -
 
-/root/ntzcore/libraries/chain/market_object.cpp
+/root/ntzcore2/libraries/chain/market_object.cpp
 graphene/chain/market_object.hpp
 -
 boost/multiprecision/cpp_int.hpp
 -
 
-/root/ntzcore/libraries/chain/proposal_evaluator.cpp
+/root/ntzcore2/libraries/chain/proposal_evaluator.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/proposal_evaluator.hpp
@@ -588,17 +588,17 @@ graphene/chain/proposal_object.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/proposal_object.cpp
+/root/ntzcore2/libraries/chain/proposal_object.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/proposal_object.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/account.cpp
+/root/ntzcore2/libraries/chain/protocol/account.cpp
 graphene/chain/protocol/account.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/address.cpp
+/root/ntzcore2/libraries/chain/protocol/address.cpp
 graphene/chain/protocol/types.hpp
 -
 graphene/chain/protocol/address.hpp
@@ -610,11 +610,11 @@ fc/crypto/base58.hpp
 algorithm
 -
 
-/root/ntzcore/libraries/chain/protocol/assert.cpp
+/root/ntzcore2/libraries/chain/protocol/assert.cpp
 graphene/chain/protocol/fee_schedule.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/asset.cpp
+/root/ntzcore2/libraries/chain/protocol/asset.cpp
 graphene/chain/protocol/asset.hpp
 -
 boost/rational.hpp
@@ -622,17 +622,17 @@ boost/rational.hpp
 boost/multiprecision/cpp_int.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/asset_ops.cpp
+/root/ntzcore2/libraries/chain/protocol/asset_ops.cpp
 graphene/chain/protocol/asset_ops.hpp
 -
 locale
 -
 
-/root/ntzcore/libraries/chain/protocol/authority.cpp
+/root/ntzcore2/libraries/chain/protocol/authority.cpp
 graphene/chain/protocol/authority.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/block.cpp
+/root/ntzcore2/libraries/chain/protocol/block.cpp
 graphene/chain/protocol/block.hpp
 -
 fc/io/raw.hpp
@@ -642,11 +642,11 @@ fc/bitutil.hpp
 algorithm
 -
 
-/root/ntzcore/libraries/chain/protocol/committee_member.cpp
+/root/ntzcore2/libraries/chain/protocol/committee_member.cpp
 graphene/chain/protocol/committee_member.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/confidential.cpp
+/root/ntzcore2/libraries/chain/protocol/confidential.cpp
 graphene/chain/protocol/confidential.hpp
 -
 graphene/chain/confidential_evaluator.hpp
@@ -660,41 +660,41 @@ fc/io/raw.hpp
 fc/crypto/elliptic.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/custom.cpp
+/root/ntzcore2/libraries/chain/protocol/custom.cpp
 graphene/chain/protocol/custom.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/fee_schedule.cpp
+/root/ntzcore2/libraries/chain/protocol/fee_schedule.cpp
 algorithm
 -
 graphene/chain/protocol/fee_schedule.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/invoice.cpp
+/root/ntzcore2/libraries/chain/protocol/invoice.cpp
 graphene/chain/protocol/invoice.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/market.cpp
+/root/ntzcore2/libraries/chain/protocol/market.cpp
 graphene/chain/protocol/market.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/memo.cpp
+/root/ntzcore2/libraries/chain/protocol/memo.cpp
 graphene/chain/protocol/memo.hpp
 -
 fc/crypto/aes.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/operations.cpp
+/root/ntzcore2/libraries/chain/protocol/operations.cpp
 graphene/chain/protocol/operations.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/proposal.cpp
+/root/ntzcore2/libraries/chain/protocol/proposal.cpp
 graphene/chain/protocol/operations.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/transaction.cpp
+/root/ntzcore2/libraries/chain/protocol/transaction.cpp
 graphene/chain/exceptions.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp
@@ -708,11 +708,11 @@ fc/bitutil.hpp
 algorithm
 -
 
-/root/ntzcore/libraries/chain/protocol/transfer.cpp
+/root/ntzcore2/libraries/chain/protocol/transfer.cpp
 graphene/chain/protocol/transfer.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/types.cpp
+/root/ntzcore2/libraries/chain/protocol/types.cpp
 graphene/chain/config.hpp
 -
 graphene/chain/protocol/types.hpp
@@ -726,7 +726,7 @@ fc/exception/exception.hpp
 fc/io/raw.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/vote.cpp
+/root/ntzcore2/libraries/chain/protocol/vote.cpp
 graphene/chain/global_property_object.hpp
 -
 graphene/chain/protocol/vote.hpp
@@ -734,19 +734,19 @@ graphene/chain/protocol/vote.hpp
 fc/variant.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/withdraw_permission.cpp
+/root/ntzcore2/libraries/chain/protocol/withdraw_permission.cpp
 graphene/chain/protocol/withdraw_permission.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/witness.cpp
+/root/ntzcore2/libraries/chain/protocol/witness.cpp
 graphene/chain/protocol/witness.hpp
 -
 
-/root/ntzcore/libraries/chain/protocol/worker.cpp
+/root/ntzcore2/libraries/chain/protocol/worker.cpp
 graphene/chain/protocol/worker.hpp
 -
 
-/root/ntzcore/libraries/chain/pts_address.cpp
+/root/ntzcore2/libraries/chain/pts_address.cpp
 graphene/chain/exceptions.hpp
 -
 graphene/chain/pts_address.hpp
@@ -760,13 +760,13 @@ fc/crypto/ripemd160.hpp
 algorithm
 -
 
-/root/ntzcore/libraries/chain/special_authority.cpp
+/root/ntzcore2/libraries/chain/special_authority.cpp
 graphene/chain/protocol/special_authority.hpp
 -
 graphene/chain/database.hpp
 -
 
-/root/ntzcore/libraries/chain/transfer_evaluator.cpp
+/root/ntzcore2/libraries/chain/transfer_evaluator.cpp
 graphene/chain/transfer_evaluator.hpp
 -
 graphene/chain/account_object.hpp
@@ -778,7 +778,7 @@ graphene/chain/hardfork.hpp
 graphene/chain/is_authorized_asset.hpp
 -
 
-/root/ntzcore/libraries/chain/vesting_balance_evaluator.cpp
+/root/ntzcore2/libraries/chain/vesting_balance_evaluator.cpp
 graphene/chain/account_object.hpp
 -
 graphene/chain/database.hpp
@@ -790,11 +790,11 @@ graphene/chain/vesting_balance_object.hpp
 graphene/chain/hardfork.hpp
 -
 
-/root/ntzcore/libraries/chain/vesting_balance_object.cpp
+/root/ntzcore2/libraries/chain/vesting_balance_object.cpp
 graphene/chain/vesting_balance_object.hpp
 -
 
-/root/ntzcore/libraries/chain/withdraw_permission_evaluator.cpp
+/root/ntzcore2/libraries/chain/withdraw_permission_evaluator.cpp
 graphene/chain/withdraw_permission_evaluator.hpp
 -
 graphene/chain/withdraw_permission_object.hpp
@@ -810,7 +810,7 @@ graphene/chain/hardfork.hpp
 graphene/chain/is_authorized_asset.hpp
 -
 
-/root/ntzcore/libraries/chain/witness_evaluator.cpp
+/root/ntzcore2/libraries/chain/witness_evaluator.cpp
 graphene/chain/witness_evaluator.hpp
 -
 graphene/chain/witness_object.hpp
@@ -824,7 +824,7 @@ graphene/chain/database.hpp
 graphene/chain/protocol/vote.hpp
 -
 
-/root/ntzcore/libraries/chain/worker_evaluator.cpp
+/root/ntzcore2/libraries/chain/worker_evaluator.cpp
 graphene/chain/database.hpp
 -
 graphene/chain/worker_evaluator.hpp
@@ -1106,6 +1106,8 @@ libraries/chain/include/graphene/chain/invoice_evaluator.hpp
 graphene/chain/evaluator.hpp
 -
 graphene/chain/invoice_object.hpp
+-
+graphene/chain/account_object.hpp
 -
 
 libraries/chain/include/graphene/chain/invoice_object.hpp

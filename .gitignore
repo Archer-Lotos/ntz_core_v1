@@ -2,6 +2,7 @@
 *.sw*
 *.vscode/
 *.cmake
+*CMakeFiles*
 results.txt
 CMakeCache.txt
 CMakeFiles

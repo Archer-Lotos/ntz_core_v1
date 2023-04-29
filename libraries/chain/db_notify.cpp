@@ -293,6 +293,23 @@ struct get_impacted_account_visitor
       _impacted.insert( op.account_to_upgrade ); // account_to_upgrade
       _impacted.insert( op.fee_payer() ); // giver
    }
+   void operator()( const account_give_pa_operation& op )
+   {
+      _impacted.insert( op.account_to_upgrade ); // account_to_upgrade
+      _impacted.insert( op.fee_payer() ); // giver
+   }
+   void operator()( const account_status_invoice_create_operation& op )
+   {
+      _impacted.insert( op.merchant ); // merchant
+      _impacted.insert( op.customer ); // customer
+      _impacted.insert( op.fee_payer() ); // creator
+   }
+   void operator()( const account_status_invoice_pay_operation& op )
+   {
+      _impacted.insert( op.merchant ); // merchant
+      _impacted.insert( op.customer ); // customer
+      _impacted.insert( op.fee_payer() ); // customer
+   }
 };
 
 void graphene::chain::operation_get_impacted_accounts( const operation& op, flat_set<account_id_type>& result )

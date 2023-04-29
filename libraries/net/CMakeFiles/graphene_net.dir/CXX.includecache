@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/net/core_messages.cpp
+/root/ntzcore2/libraries/net/core_messages.cpp
 graphene/net/core_messages.hpp
 -
 
-/root/ntzcore/libraries/net/message_oriented_connection.cpp
+/root/ntzcore2/libraries/net/message_oriented_connection.cpp
 fc/thread/thread.hpp
 -
 fc/thread/mutex.hpp
@@ -30,7 +30,7 @@ graphene/net/stcp_socket.hpp
 graphene/net/config.hpp
 -
 
-/root/ntzcore/libraries/net/node.cpp
+/root/ntzcore2/libraries/net/node.cpp
 sstream
 -
 iomanip
@@ -138,9 +138,9 @@ graphene/chain/protocol/fee_schedule.hpp
 fc/git_revision.hpp
 -
 node_impl.hxx
-/root/ntzcore/libraries/net/node_impl.hxx
+/root/ntzcore2/libraries/net/node_impl.hxx
 
-/root/ntzcore/libraries/net/node_impl.hxx
+/root/ntzcore2/libraries/net/node_impl.hxx
 memory
 -
 fc/thread/thread.hpp
@@ -160,7 +160,7 @@ graphene/net/core_messages.hpp
 graphene/net/peer_connection.hpp
 -
 
-/root/ntzcore/libraries/net/peer_connection.cpp
+/root/ntzcore2/libraries/net/peer_connection.cpp
 graphene/net/peer_connection.hpp
 -
 graphene/net/exceptions.hpp
@@ -176,7 +176,7 @@ fc/thread/thread.hpp
 boost/scope_exit.hpp
 -
 
-/root/ntzcore/libraries/net/peer_database.cpp
+/root/ntzcore2/libraries/net/peer_database.cpp
 boost/multi_index_container.hpp
 -
 boost/multi_index/ordered_index.hpp
@@ -202,7 +202,7 @@ graphene/net/peer_database.hpp
 graphene/net/config.hpp
 -
 
-/root/ntzcore/libraries/net/stcp_socket.cpp
+/root/ntzcore2/libraries/net/stcp_socket.cpp
 assert.h
 -
 algorithm

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/plugins/debug_witness/debug_api.cpp
+/root/ntzcore2/libraries/plugins/debug_witness/debug_api.cpp
 fc/filesystem.hpp
 -
 fc/optional.hpp
@@ -28,7 +28,7 @@ graphene/debug_witness/debug_api.hpp
 graphene/debug_witness/debug_witness.hpp
 -
 
-/root/ntzcore/libraries/plugins/debug_witness/debug_witness.cpp
+/root/ntzcore2/libraries/plugins/debug_witness/debug_witness.cpp
 graphene/debug_witness/debug_witness.hpp
 -
 graphene/chain/database.hpp

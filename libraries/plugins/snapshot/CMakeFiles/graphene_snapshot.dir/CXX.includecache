@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/plugins/snapshot/snapshot.cpp
+/root/ntzcore2/libraries/plugins/snapshot/snapshot.cpp
 graphene/snapshot/snapshot.hpp
 -
 graphene/chain/database.hpp

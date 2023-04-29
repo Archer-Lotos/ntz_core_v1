@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/libraries/app/api.cpp
+/root/ntzcore2/libraries/app/api.cpp
 cctype
 -
 graphene/app/api.hpp
@@ -38,7 +38,7 @@ fc/crypto/hex.hpp
 fc/thread/future.hpp
 -
 
-/root/ntzcore/libraries/app/application.cpp
+/root/ntzcore2/libraries/app/application.cpp
 graphene/app/api.hpp
 -
 graphene/app/api_access.hpp
@@ -96,9 +96,9 @@ fc/log/logger_config.hpp
 boost/range/adaptor/reversed.hpp
 -
 application_impl.hxx
-/root/ntzcore/libraries/app/application_impl.hxx
+/root/ntzcore2/libraries/app/application_impl.hxx
 
-/root/ntzcore/libraries/app/application_impl.hxx
+/root/ntzcore2/libraries/app/application_impl.hxx
 fc/network/http/websocket.hpp
 -
 fc/thread/parallel.hpp
@@ -114,7 +114,7 @@ graphene/chain/protocol/types.hpp
 graphene/net/message.hpp
 -
 
-/root/ntzcore/libraries/app/config_util.cpp
+/root/ntzcore2/libraries/app/config_util.cpp
 graphene/app/config_util.hpp
 -
 graphene/chain/config.hpp
@@ -146,7 +146,7 @@ boost/algorithm/string.hpp
 fstream
 -
 
-/root/ntzcore/libraries/app/database_api.cpp
+/root/ntzcore2/libraries/app/database_api.cpp
 graphene/app/database_api.hpp
 -
 graphene/app/util.hpp
@@ -174,13 +174,13 @@ cfenv
 iostream
 -
 
-/root/ntzcore/libraries/app/plugin.cpp
+/root/ntzcore2/libraries/app/plugin.cpp
 graphene/app/plugin.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp
 -
 
-/root/ntzcore/libraries/app/util.cpp
+/root/ntzcore2/libraries/app/util.cpp
 graphene/app/util.hpp
 -
 

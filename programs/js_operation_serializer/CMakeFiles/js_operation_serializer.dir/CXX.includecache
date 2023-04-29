@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/root/ntzcore/programs/js_operation_serializer/main.cpp
+/root/ntzcore2/programs/js_operation_serializer/main.cpp
 graphene/chain/protocol/block.hpp
 -
 graphene/chain/protocol/fee_schedule.hpp

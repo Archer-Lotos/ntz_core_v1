@@ -32,21 +32,26 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/ntzcore2/libraries/net/libgraphene_net.a")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/graphene/net" TYPE FILE FILES
-    "/root/ntzcore2/libraries/net/include/graphene/net/node.hpp"
-    "/root/ntzcore2/libraries/net/include/graphene/net/peer_database.hpp"
+    "/root/ntzcore2/libraries/net/include/graphene/net/config.hpp"
     "/root/ntzcore2/libraries/net/include/graphene/net/core_messages.hpp"
-    "/root/ntzcore2/libraries/net/include/graphene/net/peer_connection.hpp"
     "/root/ntzcore2/libraries/net/include/graphene/net/exceptions.hpp"
     "/root/ntzcore2/libraries/net/include/graphene/net/message.hpp"
-    "/root/ntzcore2/libraries/net/include/graphene/net/stcp_socket.hpp"
     "/root/ntzcore2/libraries/net/include/graphene/net/message_oriented_connection.hpp"
-    "/root/ntzcore2/libraries/net/include/graphene/net/config.hpp"
+    "/root/ntzcore2/libraries/net/include/graphene/net/node.hpp"
+    "/root/ntzcore2/libraries/net/include/graphene/net/peer_connection.hpp"
+    "/root/ntzcore2/libraries/net/include/graphene/net/peer_database.hpp"
+    "/root/ntzcore2/libraries/net/include/graphene/net/stcp_socket.hpp"
     )
 endif()
 

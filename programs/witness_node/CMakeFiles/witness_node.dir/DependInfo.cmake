@@ -28,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "libraries/plugins/debug_witness/include"
   "libraries/plugins/delayed_node/include"
   "libraries/plugins/elasticsearch/include"
+  "/usr/include/x86_64-linux-gnu"
   "libraries/plugins/witness/include"
   "libraries/egenesis/include"
   "libraries/plugins/snapshot/include"

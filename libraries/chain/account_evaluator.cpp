@@ -665,4 +665,14 @@ void_result account_status_give_evaluator::do_apply(const account_status_give_ev
 } FC_RETHROW_EXCEPTIONS( error, "Unable to upgrade account status '${a}'", ("a",o.account_to_upgrade(db()).name) ) }
 
 
+void_result account_give_pa_evaluator::do_apply(const account_give_pa_evaluator::operation_type& o)
+{ try {
+   database& d = db();
+   const account_object& user_account = o.account_to_upgrade(d);
+   const share_type fee_value = o.fee.amount; 
+   user_account.statistics(d).update_pv(fee_value, user_account, d);
+   return {};
+} FC_RETHROW_EXCEPTIONS( error, "Unable to upgrade account '${a}'", ("a",o.account_to_upgrade(db()).name) ) }
+
+
 } } // graphene::chain

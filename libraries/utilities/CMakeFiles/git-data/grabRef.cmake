@@ -15,24 +15,24 @@
 
 set(HEAD_HASH)
 
-file(READ "/root/ntzcore/libraries/utilities/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
+file(READ "/root/ntzcore2/libraries/utilities/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
 if(HEAD_CONTENTS MATCHES "ref")
 	# named branch
 	string(REPLACE "ref: " "" HEAD_REF "${HEAD_CONTENTS}")
-	if(EXISTS "/root/ntzcore/.git/${HEAD_REF}")
-		configure_file("/root/ntzcore/.git/${HEAD_REF}" "/root/ntzcore/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
-	elseif(EXISTS "/root/ntzcore/.git/logs/${HEAD_REF}")
-		configure_file("/root/ntzcore/.git/logs/${HEAD_REF}" "/root/ntzcore/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
+	if(EXISTS "/root/ntzcore2/.git/${HEAD_REF}")
+		configure_file("/root/ntzcore2/.git/${HEAD_REF}" "/root/ntzcore2/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
+	elseif(EXISTS "/root/ntzcore2/.git/logs/${HEAD_REF}")
+		configure_file("/root/ntzcore2/.git/logs/${HEAD_REF}" "/root/ntzcore2/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
 		set(HEAD_HASH "${HEAD_REF}")
 	endif()
 else()
 	# detached HEAD
-	configure_file("/root/ntzcore/.git/HEAD" "/root/ntzcore/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
+	configure_file("/root/ntzcore2/.git/HEAD" "/root/ntzcore2/libraries/utilities/CMakeFiles/git-data/head-ref" COPYONLY)
 endif()
 
 if(NOT HEAD_HASH)
-	file(READ "/root/ntzcore/libraries/utilities/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
+	file(READ "/root/ntzcore2/libraries/utilities/CMakeFiles/git-data/head-ref" HEAD_HASH LIMIT 1024)
 	string(STRIP "${HEAD_HASH}" HEAD_HASH)
 endif()

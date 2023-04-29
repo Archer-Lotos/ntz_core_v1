@@ -32,19 +32,24 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/root/ntzcore2/libraries/utilities/libgraphene_utilities.a")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/graphene/utilities" TYPE FILE FILES
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/elasticsearch.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/git_revision.hpp"
+    "/root/ntzcore2/libraries/utilities/include/graphene/utilities/key_conversion.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/padding_ostream.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/string_escape.hpp"
-    "/root/ntzcore2/libraries/utilities/include/graphene/utilities/words.hpp"
-    "/root/ntzcore2/libraries/utilities/include/graphene/utilities/key_conversion.hpp"
     "/root/ntzcore2/libraries/utilities/include/graphene/utilities/tempdir.hpp"
+    "/root/ntzcore2/libraries/utilities/include/graphene/utilities/words.hpp"
     )
 endif()
 

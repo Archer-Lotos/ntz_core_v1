@@ -416,5 +416,185 @@ account_id_type next_rewardable_pv(const account_object &a, database &d)
     }
 
 
+
+    void_result account_status_invoice_create_evaluator::do_evaluate(const account_status_invoice_create_operation &op)
+    {
+        try
+        {
+            database& d = db();
+            account = &d.get(op.customer);
+            account_id_type merchant_validator = d.get_global_properties().parameters.merchant_validator_account;
+            auto& admin = d.get<account_object>(merchant_validator);
+            auto& merchant = d.get<account_object>(op.merchant);
+
+            FC_ASSERT(account->referral_status_type <= op.referral_status_type);
+
+            FC_ASSERT(op.creator == account_id_type(264))
+
+            FC_ASSERT(admin.whitelisted_accounts.find(merchant.id) != admin.whitelisted_accounts.end(), "Not allowed merchant!");
+            FC_ASSERT(merchant.active_referral_status(d.head_block_time()) > 0, "Not active partner!");
+            FC_ASSERT(op.amount.asset_id == asset_id_type(0), "Invoice must be in core asset - NTZ!");
+            FC_ASSERT(op.amount.asset_id == op.tax.asset_id && op.amount.asset_id == op.delivery.asset_id && op.amount.asset_id == op.ntz_amount.asset_id, "All fields must be in same asset!");
+            FC_ASSERT(op.ntz_amount.amount + op.delivery.amount + op.tax.amount <= op.amount.amount, "Invoice reward must be less or equal than invoice ammount!");
+
+            return void_result();
+        }
+        FC_CAPTURE_AND_RETHROW((op))
+    }
+
+    object_id_type account_status_invoice_create_evaluator::do_apply(const account_status_invoice_create_operation &op)
+    {
+        try
+        {
+            database& d = db();
+            const auto& new_invoice_object_obj = db().create<new_invoice_object>([&](new_invoice_object &obj) {
+                obj.creator = op.creator;
+                obj.merchant = op.merchant;
+                obj.customer = op.customer;
+                obj.merchant_order_id = op.merchant_order_id;
+                obj.amount = op.amount;
+                obj.ntz_amount=op.ntz_amount;
+                obj.tax=op.tax;
+                obj.delivery=op.delivery;
+                obj.memo = op.memo;
+                obj.status = 0;
+                obj.expiration = d.head_block_time() + fc::days(2);
+                ;
+            });
+            return new_invoice_object_obj.id;
+        }
+        FC_CAPTURE_AND_RETHROW((op))
+    }
+
+
+    void_result account_status_invoice_pay_evaluator::do_evaluate(const account_status_invoice_pay_operation &op)
+    {
+        try
+        {
+            database& d = db();
+            invoice = &op.invoice(d);
+            account = &d.get(op.customer);
+            const account_object& payer_account = op.payer(d);
+
+            const asset_object& core_asset_type = d.get_core_asset();
+            const asset_object& op_core_asset_type = op.core_amount.asset_id(d);
+            bool insufficient_core = d.get_balance(payer_account, core_asset_type).amount >= op.core_amount.amount;
+    
+            FC_ASSERT(account->referral_status_type <= op.referral_status_type);
+
+            FC_ASSERT(core_asset_type.get_id() == op_core_asset_type.get_id(), "Core Asset must be NTZ!");
+            FC_ASSERT(invoice->customer == op.customer, "Customers must match!");
+            FC_ASSERT(invoice->is_active(d.head_block_time()) == 0, "Invoice Expired");
+
+            FC_ASSERT(invoice->amount.amount == op.core_amount.amount, "Invoice amount must match");
+
+            FC_ASSERT(insufficient_core, "Insufficient Core Asset Balance");
+
+            return void_result();
+        }
+        FC_CAPTURE_AND_RETHROW((op))
+    }
+
+    void_result account_status_invoice_pay_evaluator::do_apply(const account_status_invoice_pay_operation &op)
+    {
+        try
+        {
+            database& d = db();
+            const account_object& customer_account = op.customer(d);
+            const account_object& merchant_account = op.merchant(d);
+            const account_object& merchant_referrer = d.get(merchant_account.referrer);
+
+            uint16_t merchant_percent = d.get_global_properties().parameters.merchant_percent;
+            uint16_t merchant_referrer_percent = d.get_global_properties().parameters.merchant_referrer_percent;
+
+            if ( op.core_amount.amount > 0) {
+                d.modify(*account, [&](account_object& a) {
+                    if( op.referral_status_type == a.referral_status_type )
+                    {
+                        if (a.referral_status_expiration_date > d.head_block_time())
+                        {
+                            a.referral_status_expiration_date += fc::days(365);
+                        } else {
+                            a.referral_status_expiration_date = d.head_block_time() + fc::days(365);
+                        }
+                    } 
+                    else {
+                        a.referral_status_type = op.referral_status_type;
+                        if (a.referral_status_expiration_date > d.head_block_time())
+                        {
+                            share_type bonus_days;
+                            share_type paid_last;
+                            paid_last = 0;
+                            bonus_days = 0;
+                            share_type last_days = (a.referral_status_expiration_date - d.head_block_time()).count()/fc::days(1).count();
+                            paid_last = a.referral_status_paid_fee/365*last_days;
+                            bonus_days = bonus_days + paid_last*365/op.fee.amount;
+                            if (bonus_days>0)
+                            {
+                                uint64_t uintbonus;
+                                uintbonus=0;
+                                for (int i = 0; i < bonus_days; ++i)
+                                {
+                                uintbonus++;
+                                }
+                                a.referral_status_expiration_date = d.head_block_time() + fc::days(365) + fc::days(uintbonus);
+                                ilog("BONUS - ACCOUNT ${account}, LAST_DAYS ${last_days},  BONUS_DAYS ${bonus_days}, PAID_LAST ${paid_last}",  ("account", a.name)("bonus_days", uintbonus)("last_days",last_days)("paid_last",paid_last));
+                            }
+                        } else {
+                            a.referral_status_expiration_date = d.head_block_time() + fc::days(365);
+                        } 
+                    }
+                }
+
+                db().adjust_balance(op.payer, -op.core_amount);
+                db().adjust_balance(op.merchant, cut_fee_reward(invoice->ntz_amount.amount, merchant_percent));
+                db().adjust_balance(op.merchant, op.core_amount.amount - invoice->ntz_amount.amount - invoice->tax.amount);
+
+                customer_account.statistics(d).update_nv(invoice->ntz_amount.amount, uint8_t(1) , uint8_t(0) , customer_account, d);
+
+                customer_account.statistics(d).update_pv(invoice->ntz_amount.amount, customer_account, d); 
+
+                const account_statistics_object& customer_statistics = customer_account.statistics(d);
+ 
+                d.modify(customer_statistics, [&](account_statistics_object& s)
+                {
+                    s.pay_fee( invoice->ntz_amount.amount, d.get_global_properties().parameters.cashback_vesting_threshold );
+                });
+
+                d.modify(customer_account, [&](account_object& a) {
+                    a.statistics(d).process_fees(a, d);
+                });
+
+                asset merchant_core_reward;
+                merchant_core_reward.amount = cut_fee_reward(invoice->ntz_amount.amount, merchant_percent);
+                merchant_core_reward.asset_id = op.core_amount.asset_id;               
+
+                asset merchant_referrer_core_reward;
+                merchant_referrer_core_reward.amount = cut_fee_reward(invoice->ntz_amount.amount, merchant_referrer_percent);
+                merchant_referrer_core_reward.asset_id = op.core_amount.asset_id;   
+
+                d.deposit_cashback(merchant_referrer, cut_fee_reward(op.core_amount.amount, merchant_referrer_percent), false);
+
+                d.modify(asset_dynamic_data_id_type()(d), [&](asset_dynamic_data_object &addo) {
+                    addo.accumulated_fees -= merchant_core_reward.amount;
+                    addo.accumulated_fees -= merchant_referrer_core_reward.amount;
+                    addo.accumulated_fees += invoice->tax.amount;
+                });
+ 
+            }
+
+            d.modify(
+                d.get(op.invoice),
+                [&]( new_invoice_object& i )
+                {
+                    i.status = 1;
+                }
+            );
+
+            return void_result();
+        }
+        FC_CAPTURE_AND_RETHROW((op))
+    }
+
 }
 } // namespace chain
